@@ -1,0 +1,25 @@
+﻿CREATE TABLE [etl].[eBusinessAccounts] (
+    [SAMACCOUNTNAME]      VARCHAR (150)  NOT NULL,
+    [ORGANIZATION]        VARCHAR (5)    NULL,
+    [ACRONYM]             VARCHAR (10)   NULL,
+    [OFFICECODE]          VARCHAR (15)   NULL,
+    [OFFICENAME]          VARCHAR (255)  NULL,
+    [PREFERRED_FIRSTNAME] VARCHAR (150)  NULL,
+    [FIRSTNAME]           VARCHAR (150)  NULL,
+    [MIDDLE_INITIAL]      VARCHAR (25)   NULL,
+    [LASTNAME]            VARCHAR (150)  NULL,
+    [AFFLIATION_CODE]     VARCHAR (10)   NULL,
+    [EMAIL]               VARCHAR (255)  NULL,
+    [WORKFORCEID]         VARCHAR (15)   NULL,
+    [DISTINGUISHEDNAME]   VARCHAR (1000) NULL,
+    [ENABLED]             BIT            NULL,
+    [BUILDING]            VARCHAR (1000) NULL,
+    [ADDRESS_LINE1]       VARCHAR (250)  NULL,
+    [CITY]                VARCHAR (75)   NULL,
+    [STATE]               VARCHAR (50)   NULL,
+    [ZIPCODE]             VARCHAR (12)   NULL,
+    [ROOM_NUMBER]         VARCHAR (150)  NULL,
+    [DT_IMPORT]           DATETIME       NULL,
+    CONSTRAINT [PK_eBusinessAccounts_1] PRIMARY KEY CLUSTERED ([SAMACCOUNTNAME] ASC)
+);
+

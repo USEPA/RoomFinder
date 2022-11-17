@@ -1,0 +1,3 @@
+<div *ngFor="let equipment of equipmentFilter">
+  <mat-checkbox [(ngModel)]="equipment.checked" (ngModelChange)="equipmentConfigChanged()">{{equipment.value}}</mat-checkbox>
+</div>

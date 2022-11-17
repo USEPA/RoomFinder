@@ -1,0 +1,39 @@
+import { NgModule } from '@angular/core';
+import { AlertsComponent } from './alerts/alerts.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
+import { SharedModule } from '../shared/shared.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { NavFooterComponent } from './nav-footer/nav-footer.component';
+
+@NgModule({
+  imports: [
+    SharedModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+  ],
+  declarations: [
+    AlertsComponent,
+    NavBarComponent,
+    NavFooterComponent,
+    ProgressSpinnerComponent,
+  ],
+  entryComponents: [
+  ],
+  exports: [
+    AlertsComponent,
+    NavBarComponent,
+    NavFooterComponent,
+    ProgressSpinnerComponent,
+  ],
+  bootstrap: [
+    AlertsComponent,
+    ProgressSpinnerComponent,
+  ]
+})
+export class RoomFinderModule { }

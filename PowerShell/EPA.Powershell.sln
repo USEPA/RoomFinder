@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPA.SharePoint.PowerShell", "src\EPA.SharePoint.PowerShell\EPA.SharePoint.PowerShell.csproj", "{55A5B163-9354-49B7-8E87-EDA7D75AA624}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B6D71AEF-D048-49CD-AC53-11D00384545F}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPA.Office365.API", "src\EPA.Office365.API\EPA.Office365.API.csproj", "{9839BF9D-2423-4087-96FD-E1B531FE9F7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPA.Office365", "src\EPA.Office365\EPA.Office365.csproj", "{D33AD6B2-49C6-4CB4-8340-B2A23EA09DB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{756F1BA8-4B6E-47AA-8127-188C686507DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{36ABD545-EB7B-4B6C-9254-C760C0ECA73E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPA.SharePoint.SysConsole", "src\EPA.SharePoint.SysConsole\EPA.SharePoint.SysConsole.csproj", "{C3922693-C3A0-46F5-BDF2-2A893FE19405}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55A5B163-9354-49B7-8E87-EDA7D75AA624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A5B163-9354-49B7-8E87-EDA7D75AA624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A5B163-9354-49B7-8E87-EDA7D75AA624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A5B163-9354-49B7-8E87-EDA7D75AA624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9839BF9D-2423-4087-96FD-E1B531FE9F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9839BF9D-2423-4087-96FD-E1B531FE9F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9839BF9D-2423-4087-96FD-E1B531FE9F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9839BF9D-2423-4087-96FD-E1B531FE9F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33AD6B2-49C6-4CB4-8340-B2A23EA09DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33AD6B2-49C6-4CB4-8340-B2A23EA09DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33AD6B2-49C6-4CB4-8340-B2A23EA09DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33AD6B2-49C6-4CB4-8340-B2A23EA09DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3922693-C3A0-46F5-BDF2-2A893FE19405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3922693-C3A0-46F5-BDF2-2A893FE19405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3922693-C3A0-46F5-BDF2-2A893FE19405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3922693-C3A0-46F5-BDF2-2A893FE19405}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55A5B163-9354-49B7-8E87-EDA7D75AA624} = {756F1BA8-4B6E-47AA-8127-188C686507DA}
+		{9839BF9D-2423-4087-96FD-E1B531FE9F7F} = {756F1BA8-4B6E-47AA-8127-188C686507DA}
+		{D33AD6B2-49C6-4CB4-8340-B2A23EA09DB5} = {756F1BA8-4B6E-47AA-8127-188C686507DA}
+		{C3922693-C3A0-46F5-BDF2-2A893FE19405} = {756F1BA8-4B6E-47AA-8127-188C686507DA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1841685D-2F08-4578-94F5-DE3501EB9CA7}
+	EndGlobalSection
+EndGlobal

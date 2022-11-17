@@ -1,0 +1,49 @@
+<div fxFlex="100%" style="border:1px;">
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img src="../../assets/images/room.png" alt="" title="Rooms" id="searchRoom" />
+      </ng-template>
+      <div>
+        <mat-tab-group id="roomsTabs" [selectedIndex]="0">
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <span>Rooms List</span>
+            </ng-template>
+            <app-rooms-list></app-rooms-list>
+          </mat-tab>
+
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <span>Location</span>
+            </ng-template>
+            <app-rooms-list [locationTab]="true"></app-rooms-list>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img src="../../assets/images/tools.jpg" alt="" title="Equipment" id="searchEquipment" class="inactive" />
+      </ng-template>
+      <div>
+        <mat-tab-group id="equipmentTabs" [selectedIndex]="0">
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <span>Equipment List</span>
+            </ng-template>
+            <app-equipment-list></app-equipment-list>
+          </mat-tab>
+
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <span>Location</span>
+            </ng-template>
+            <app-equipment-list [locationTab]="true"></app-equipment-list>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

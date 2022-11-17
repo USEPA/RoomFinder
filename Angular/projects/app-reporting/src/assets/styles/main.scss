@@ -1,0 +1,403 @@
+@import './themes/theme-main.scss';
+
+
+
+/* extend/inheritance */
+%expansion-pannel-content-shared {
+  border-style: none solid solid solid !important;
+  border-width: .075em !important;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* extend/inheritance */
+%tab-label-accessibility {
+  text-decoration: underline;
+  font-weight: 700 !important;
+}
+
+.mat-badge-warn {
+  .mat-badge-content {
+    background: $warning;
+  }
+}
+
+nav#navsiteMap {
+  .mat-badge-content {
+    display: none !important;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+
+.div-nowrap {
+  white-space: nowrap;
+}
+
+/* Begin Modal Dialog styles */
+/* force inputs to display vertically, one input on each row */
+.dialog-content-vertical {
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* defaults all children widths */
+.dialog-content-vertical>* {
+  width: 100%;
+}
+
+/* allow for explicitly sized modal.  otherwise content gets cut off (at least when using the dialog-content-vertical class) */
+.dialog-content-width-400 {
+  width: 25em;
+}
+
+.dialog-content-full-width {
+  width: 100%;
+}
+
+/* End Modal Dialog styles */
+
+.warning-text {
+  color: $warning
+}
+
+.mat-header-cell {
+  font-size: inherit !important;
+  font-weight: bold !important;
+  color: white !important;
+}
+
+
+.boldRedText {
+  color: $warning;
+  font-weight: bold;
+}
+
+.boldGreenText {
+  color: green;
+  font-weight: bold;
+}
+
+.mat-cell-pull-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mat-button-sm {
+  min-width: 2em !important;
+  padding-left: .2em !important;
+  padding-right: .2em !important;
+  max-height: 1.75em !important;
+}
+
+.mat-button-router {
+  color: $ultra-light;
+}
+
+.mat-icon-sm {
+  vertical-align: top !important;
+}
+
+.help-icon {
+  display: inline-block;
+}
+
+.full-width,
+.mat-full-width {
+  width: 100%;
+}
+
+hr {
+  border: 0;
+  border-top: .1em solid;
+  border-color: #D3D3D3 !important;
+  background-color: #D3D3D3 !important;
+  color: #D3D3D3 !important;
+}
+
+.padding-around-sm {
+  padding: .5em !important;
+}
+
+.padding-around {
+  padding: 1em !important;
+}
+
+.padding-top {
+  padding-top: 1em !important;
+}
+
+.padding-top-sm {
+  padding-top: .5em !important;
+}
+
+.padding-left {
+  padding-left: 1em !important;
+}
+
+.padding-right {
+  padding-right: 1em !important;
+}
+
+.padding-bottom {
+  padding-bottom: 1em !important;
+}
+
+.padding-bottom-sm {
+  padding-bottom: .5em !important;
+}
+
+.margin-bottom {
+  margin-bottom: 1em !important;
+}
+
+.margin-top {
+  margin-top: 1em !important;
+}
+
+.margin-left {
+  margin-left: 1em !important;
+}
+
+.mat-ink-bar {
+  visibility: hidden !important;
+}
+
+/* Start Styles for Tab */
+
+.mat-tab-label {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.mat-tab-label:focus:not(.mat-tab-label-active) {
+  @extend %tab-label-accessibility;
+  background: none !important;
+}
+
+.mat-tab-label:hover {
+  @extend %tab-label-accessibility;
+}
+
+.mat-tab-label-active:focus {
+  background-color: $hover-focus !important;
+}
+
+.mat-tab-label-active:hover,
+.mat-tab-label-active {
+  @extend %tab-label-accessibility;
+  background-color: white !important;
+  opacity: 1;
+  color: black !important;
+  box-shadow: .5em 0em 1em rgb(82, 82, 82);
+}
+
+/* End Styles for Tab */
+
+.text-bold {
+  font-weight: bold;
+}
+
+.notification-success {
+  background-color: #087f23 !important;
+  margin-top: 6em !important;
+}
+
+.notification-failure {
+  background-color: $warning !important;
+  margin-top: 6em !important;
+}
+
+.text-hint {
+  padding-top: 0.5em;
+  font-size: 75%;
+}
+
+.notification-info {
+  background-color: #676767 !important;
+  margin-top: 6em !important;
+}
+
+mat-tab-group .mat-header-row {
+  min-height: 3em;
+}
+
+/* Reduce the bottom margin for this built in mat style used for page titles (by default 64px) */
+.mat-display-1,
+.mat-typography .mat-display-1 {
+  font-size: 1.75em;
+  margin: 0;
+}
+
+.button-svg {
+  vertical-align: middle !important;
+}
+
+// Fix IE having cell text not centered
+// Copied from https://github.com/angular/material2/blob/master/src/lib/table/table.scss
+.mat-row,
+.mat-header-row {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  ::after {
+    display: inline-block;
+    min-height: inherit;
+    content: '';
+  }
+}
+
+.visible {
+  visibility: visible
+}
+
+.hidden {
+  visibility: hidden
+}
+
+// Fix IE drop down not being full width
+// This fix is not ideal as alignment is still slightly off, but IE ignores calc under a flex
+// https://github.com/philipwalton/flexbugs#flexbug-8
+.mat-select-panel-done-animating {
+  min-width: 100% !important;
+}
+
+.details-label {
+  @extend .align-right;
+  @extend .text-bold;
+  @extend .padding-bottom-sm;
+}
+
+.details-value {
+  @extend .margin-left;
+  @extend .padding-bottom-sm;
+}
+
+.tile-header {
+  background-color: #333c33 !important;
+  height: 10em !important;
+  color: white !important;
+  padding-bottom: 0px !important;
+}
+
+.content-container {
+  border-color: #333c33 !important;
+  border-width: 3px !important;
+  border-style: solid !important;
+}
+
+.mat-header-cell .mat-checkbox-frame {
+  border-color: currentColor;
+}
+
+.button-with-no-text {
+  min-width: initial !important;
+}
+
+.boxed {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $med-dark;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.success {
+  color: $success;
+}
+
+.compliant {
+  color: $success;
+}
+
+.non-compliant {
+  color: $failure;
+}
+
+.strong-warning {
+  color: $failure;
+}
+
+.medium-warning {
+  color: $caution;
+}
+
+.more-info {
+  color: $med-dark;
+}
+
+.medium-color {
+  color: $medium;
+}
+
+.mat-center {
+  text-align: center;
+  justify-content: center;
+}
+
+.selected {
+  background-color: $hover-focus !important;
+}
+
+.dashboard-content-container {
+  // border-color: $ok;
+  border-color: $med-dark !important;
+  border-width: 1px !important;
+  border-style: solid;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.dashboard-big-bird {
+  border-width: 4px;
+  border-style: solid;
+  color: #ffd530;
+  background-color: #ffd530;
+  border-color: #ffd530;
+}
+
+.big-input {
+  width: 90%;
+}
+
+.mat-error {
+  color: $warning;
+}
+
+.mat-form-field-invalid {
+  color: $warning;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: $warning;
+}
+
+.mat-input-element.mat-form-field-invalid .mat-input-element {
+  caret-color: ($warning, text);
+}
+
+.mat-option.mat-selected:not(.mat-option-disabled) {
+  color: ($warning, text);
+}
+
+
+.mat-select.mat-select-invalid .mat-select-arrow {
+  color: ($warning, text);
+}
+
+
+button.close.ng-star-inserted {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.25rem 0.55rem;
+}

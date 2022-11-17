@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>db_analytics</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b734cfc1-c61a-4cdc-b1ae-9ca7aca180e5}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>db_analytics</RootNamespace>
+    <AssemblyName>db_analytics</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="etl\" />
+    <Folder Include="etl\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Scripts" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Scripts\PostDeployment" />
+    <Folder Include="etl\Stored Procedures" />
+    <Folder Include="dbo\Functions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\GraphSharePointSiteUsagePages.sql" />
+    <Build Include="dbo\Tables\GraphSharePointSiteUsageSiteCounts.sql" />
+    <Build Include="dbo\Tables\GraphSharePointSiteUsageStorage.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessActivityActivityCounts.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessActivityUserCounts.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessActivityUserDetail.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessDeviceUsageDistributionUserCounts.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessDeviceUsageUserCounts.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessDeviceUsageUserDetail.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessOrganizerActivityCounts.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessOrganizerActivityMinuteCounts.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessOrganizerActivityUserCounts.sql" />
+    <Build Include="dbo\Tables\TenantWeb.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessParticipantActivityCounts.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessParticipantActivityMinuteCounts.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessParticipantActivityUserCounts.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessPeerToPeerActivityCounts.sql" />
+    <Build Include="dbo\Tables\TenantWebSharing.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessPeerToPeerActivityMinuteCounts.sql" />
+    <Build Include="dbo\Tables\GraphSkypeForBusinessPeerToPeerActivityUserCounts.sql" />
+    <Build Include="dbo\Tables\O365PreviewOneDrive_DataBuildLog.sql" />
+    <Build Include="dbo\Tables\O365PreviewOneDriveDates.sql" />
+    <Build Include="dbo\Tables\O365PreviewOneDriveMonthly.sql" />
+    <Build Include="dbo\Tables\O365PreviewOneDriveMonthlyRollup.sql" />
+    <Build Include="dbo\Tables\O365PreviewSkype_DataBuildLog.sql" />
+    <Build Include="dbo\Tables\O365PreviewSkypeDates.sql" />
+    <Build Include="dbo\Tables\O365PreviewSkypeMonthlyRollup.sql" />
+    <Build Include="dbo\Tables\O365ReportODFBDeployedMonthly.sql" />
+    <Build Include="dbo\Tables\O365ReportODFBDeployedWeekly.sql" />
+    <Build Include="dbo\Tables\O365ReportODFBStorageMonthly.sql" />
+    <Build Include="dbo\Tables\O365ReportODFBStorageWeekly.sql" />
+    <Build Include="dbo\Tables\O365ReportSPOActiveUsersMonthly.sql" />
+    <Build Include="dbo\Tables\O365ReportSPOActiveUsersWeekly.sql" />
+    <Build Include="dbo\Tables\O365ReportSPOClientSoftwareBrowser.sql" />
+    <Build Include="dbo\Tables\O365ReportSPOConferencesWeekly.sql" />
+    <Build Include="dbo\Tables\O365ReportSPOConnectionsWeekly.sql" />
+    <Build Include="dbo\Tables\O365ReportSPOTenantStorageMonthly.sql" />
+    <Build Include="dbo\Tables\O365ReportSPOTenantStorageWeekly.sql" />
+    <Build Include="dbo\Tables\TenantDates.sql" />
+    <Build Include="dbo\Tables\TenantSite.sql" />
+    <Build Include="dbo\Tables\TenantSiteAnalytics.sql" />
+    <Build Include="dbo\Tables\TenantWebAddIn.sql" />
+    <Build Include="etl\Tables\ODFBActivity.sql" />
+    <Build Include="etl\Tables\ODFBStorageListing.sql" />
+    <Build Include="etl\Tables\eBusinessAccounts.sql" />
+    <Build Include="dbo\Tables\__MigrationHistory.sql" />
+    <Build Include="dbo\Tables\AnalyticsExternalUsers.sql" />
+    <Build Include="dbo\Tables\AnalyticsExternalUsersSites.sql" />
+    <Build Include="dbo\Tables\AnalyticsO365Groups.sql" />
+    <Build Include="dbo\Tables\AnalyticsUserProfiles.sql" />
+    <Build Include="dbo\Tables\eBusinessAccounts.sql" />
+    <Build Include="dbo\Tables\eBusinessOfficeListing.sql" />
+    <Build Include="dbo\Tables\GraphO365ActiveUserDetails.sql" />
+    <Build Include="dbo\Tables\GraphO365ActiveUsers.sql" />
+    <Build Include="dbo\Tables\GraphO365ActiveUserServices.sql" />
+    <Build Include="dbo\Tables\GraphOneDriveActivityDetail.sql" />
+    <Build Include="dbo\Tables\GraphOneDriveActivityFiles.sql" />
+    <Build Include="dbo\Tables\GraphOneDriveActivityUsers.sql" />
+    <Build Include="dbo\Tables\GraphOneDriveUsageAccount.sql" />
+    <Build Include="dbo\Tables\GraphOneDriveUsageDetail.sql" />
+    <Build Include="dbo\Tables\GraphOneDriveUsageFileCounts.sql" />
+    <Build Include="dbo\Tables\GraphOneDriveUsageStorage.sql" />
+    <Build Include="dbo\Tables\GraphSharePointActivityFileCounts.sql" />
+    <Build Include="dbo\Tables\GraphSharePointActivityPagesCounts.sql" />
+    <Build Include="dbo\Tables\GraphSharePointActivityUserCounts.sql" />
+    <Build Include="dbo\Tables\GraphSharePointActivityUserDetail.sql" />
+    <Build Include="dbo\Tables\GraphSharePointSiteUsageDetail.sql" />
+    <Build Include="dbo\Tables\GraphSharePointSiteUsageFileCounts.sql" />
+    <Build Include="dbo\Views\AnalyticsSiteCollection.sql" />
+    <Build Include="dbo\Views\AnalyticsSites.sql" />
+    <Build Include="dbo\Views\OneDriveTotalAccountStorage.sql" />
+    <Build Include="dbo\Views\OneDriveTotalActiveAccounts.sql" />
+    <Build Include="dbo\Views\OneDriveTotalFileActivity.sql" />
+    <Build Include="dbo\Views\OneDriveTotalUserActivity.sql" />
+    <Build Include="dbo\Views\OneDriveUserStorageSnapshot.sql" />
+    <Build Include="dbo\Views\vwAnalyticsSites.sql" />
+    <Build Include="dbo\Views\vwAnalyticsSitesOwners.sql" />
+    <Build Include="dbo\Views\vwAnalyticsSitesRollup.sql" />
+    <Build Include="dbo\Views\vwO365PreviewOneDriveUsageMonthly.sql" />
+    <Build Include="dbo\Views\vwO365PreviewOneDriveUsageMonthlyTotal.sql" />
+    <Build Include="dbo\Views\vwOneDriveActivity.sql" />
+    <Build Include="dbo\Views\zzOneDriveStats-Storage.sql" />
+    <Build Include="dbo\Views\zzOneDriveStats-Syncing.sql" />
+    <Build Include="dbo\Views\vwTenantWebs.sql" />
+    <Build Include="dbo\Stored Procedures\Skype_02_UsageMonthlyRollupOffice.sql" />
+    <Build Include="dbo\Stored Procedures\Skype_01_UsageMonthlyDates.sql" />
+    <Build Include="dbo\Stored Procedures\OD4B_03_UsageMonthlyRollupUser.sql" />
+    <Build Include="dbo\Stored Procedures\OD4B_02_UsageMonthlyRollupOffice.sql" />
+    <Build Include="dbo\Stored Procedures\OD4B_01_UsageMonthlyDates.sql" />
+    <Build Include="etl\etlschema.sql" />
+    <PostDeploy Include="Scripts\PostDeployment\Script.PostDeployment1.sql" />
+    <Build Include="dbo\Tables\AnalyticsUserProfilesSubsites.sql" />
+    <Build Include="dbo\Tables\TenantSiteListing.sql" />
+    <Build Include="dbo\Tables\TenantSiteMailboxes.sql" />
+    <Build Include="dbo\Tables\GraphTeamsActivityUserDetail.sql" />
+    <Build Include="dbo\Tables\GraphTeamsActivityActivityCounts.sql" />
+    <Build Include="dbo\Tables\GraphTeamsActivityUserCounts.sql" />
+    <Build Include="dbo\Tables\GraphTeamsDeviceUsageUserDetail.sql" />
+    <Build Include="dbo\Tables\GraphTeamsDeviceUsageUserCounts.sql" />
+    <Build Include="dbo\Tables\GraphTeamsDeviceUsageDistributionUserCounts.sql" />
+    <Build Include="dbo\Views\vwSPOStats-Employee-Sharing.sql" />
+    <Build Include="dbo\Views\vwSPOStats-Employee-Syncing.sql" />
+    <Build Include="dbo\Views\vwTenantWebAddIns.sql" />
+    <Build Include="dbo\Stored Procedures\sp_del_etlEBusinessAccounts.sql" />
+    <Build Include="dbo\Stored Procedures\sp_ins_dboEBusinessAccounts.sql" />
+    <Build Include="dbo\Functions\svfUFN_SEPARATES_COLUMNS.sql" />
+    <Build Include="dbo\Views\vwETLeBusinessAccountsPrepForImport.sql" />
+    <Build Include="dbo\Views\vwGraphOneDriveUsageDetail.sql" />
+    <Build Include="dbo\Views\vwOneDriveStorage.sql" />
+    <Build Include="dbo\Views\vwO365GroupAnalytics.sql" />
+    <Build Include="dbo\Stored Procedures\MSTeams_01_UsageMonthlyDates.sql" />
+    <Build Include="dbo\Stored Procedures\MSTeams_02_UsageMonthlyRollupOffice.sql" />
+    <Build Include="dbo\Tables\O365PreviewTeams_DataBuildLog.sql" />
+    <Build Include="dbo\Tables\O365PreviewTeamsDates.sql" />
+    <Build Include="dbo\Tables\O365PreviewTeamsMonthlyRollup.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\PostDeployment\Data_MigrationHistory.sql" />
+    <None Include="Scripts\PostDeployment\Data_eBusinessAccount.sql" />
+    <None Include="Scripts\PostDeployment\Data_eBusinessOfficeListing.sql" />
+    <None Include="Scripts\PostDeployment\addColumnsAnalyticsO365Groups.sql" />
+    <None Include="db_analytics.publish.xml" />
+    <None Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="db_analytics.refactorlog" />
+  </ItemGroup>
+</Project>

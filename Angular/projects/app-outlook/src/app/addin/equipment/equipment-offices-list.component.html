@@ -1,0 +1,10 @@
+<div>
+  <mat-form-field>
+    <mat-label class="ms-fontSize-16">Offices</mat-label>
+    <mat-select [(value)]="selectOffices" placeholder="Offices" [(ngModel)]="selectOffices" (ngModelChange)="officesChanged()">
+      <mat-option *ngFor="let office of offices" [value]="office.value">
+        {{office.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

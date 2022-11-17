@@ -1,0 +1,10 @@
+<div>
+  <mat-form-field>
+    <mat-label class="ms-fontSize-16 pickerlabel">Select a Room</mat-label>
+    <mat-select id="roomSelector" class="pickerdate" [(value)]="selectRooms" placeholder="Select a Room" [(ngModel)]="selectRooms" (ngModelChange)="roomsChanged()" required role="listbox">
+      <mat-option *ngFor="let room of rooms" [value]="room.emailAddress">
+        {{room.displayName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

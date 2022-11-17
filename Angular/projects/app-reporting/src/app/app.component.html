@@ -1,0 +1,19 @@
+<section class="mat-typography">
+  <header>
+    <app-nav-bar></app-nav-bar>
+    <app-alerts></app-alerts>
+  </header>
+  <main role="main">
+    <div id="appContainer" class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center">
+      <div fxFlex="1%" fxHide.sm></div>
+      <div fxFlex="98%">
+        <router-outlet></router-outlet>
+      </div>
+      <div fxFlex="1%" fxHide.sm></div>
+    </div>
+    <div class="space-before"></div>
+  </main>
+  <footer>
+    <app-nav-footer></app-nav-footer>
+  </footer>
+</section>

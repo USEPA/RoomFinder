@@ -1,0 +1,10 @@
+<div>
+  <mat-form-field>
+    <mat-label class="ms-fontSize-16">States</mat-label>
+    <mat-select [(value)]="selectStates" placeholder="States" [(ngModel)]="selectStates" (ngModelChange)="statesChanged()">
+      <mat-option *ngFor="let state of states" [value]="state.value">
+        {{state.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

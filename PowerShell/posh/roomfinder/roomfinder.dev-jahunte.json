@@ -1,0 +1,11 @@
+﻿{
+  "AdminCredName": "addinroomfinderdevjames",
+  "TenantID": "jamesiq.onmicrosoft.com",
+  "roomResourceJSON": ".\\Scripting\\mailboxes\\resources-objects.dev-jahunte.json",
+  "RenamedMailboxesCsv": ".\\Scripting\\config\\RoomFinder-mailbox-renames.dev.csv",
+  "appmanifestxml": ".\\Scripting\\manifest\\manifest-ssl.xml",
+  "RoomFinderSvcAccount": "hunter.james@jamesiq.onmicrosoft.com",
+  "RoomFinderDistroGroup": "",
+  "RoomFinderAddInName": "Room Availability - Dev",
+  "RoomFinderAddInUsersCsv": ".\\scripting\\config\\RoomFinder-users.dev.csv"
+}

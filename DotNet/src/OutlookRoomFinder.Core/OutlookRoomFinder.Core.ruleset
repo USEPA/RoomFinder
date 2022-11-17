@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="SonarQube - CoolBridge" ToolsVersion="16.0">
+  <Include Path="..\..\sonarqube\outlookroomfinder_dotnetcsharp.ruleset" Action="Default" />
+</RuleSet>

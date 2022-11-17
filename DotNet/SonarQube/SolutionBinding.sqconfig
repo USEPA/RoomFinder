@@ -1,0 +1,12 @@
+{
+  "ServerUri": "https:///",
+  "Organization": null,
+  "ProjectKey": "OutlookRoomFinder_DotNet",
+  "ProjectName": "OutlookRoomFinder DotNet",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "",
+      "ProfileTimestamp": "2019-04-16T08:45:23-05:00"
+    }
+  }
+}

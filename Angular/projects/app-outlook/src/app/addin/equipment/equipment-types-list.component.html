@@ -1,0 +1,10 @@
+<div>
+  <mat-form-field>
+    <mat-label class="ms-fontSize-16">Equipment</mat-label>
+    <mat-select [(value)]="selectEquipmentTypes" placeholder="Equipment Types" [(ngModel)]="selectEquipmentTypes" (ngModelChange)="equipmentTypesChanged()">
+      <mat-option *ngFor="let equipmentType of equipmentTypes" [value]="equipmentType.value">
+        {{equipmentType.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

@@ -1,0 +1,58 @@
+<nav>
+  <mat-toolbar color='primary' class='roomfinder-nav'>
+    <ng-container>
+      <button mat-button [routerLink]="['/']">
+        <fa-icon aria-hidden="false" aria-label="navigate home" [icon]="faHomeIcon">home</fa-icon>
+        <span fxHide.sm>Room Finder</span>
+      </button>
+      <ng-container id="navReports" *ngIf="isAuthenticated()">
+        <button mat-button [matMenuTriggerFor]="reportingMenu">
+          <fa-icon [icon]="['fas', 'calendar-week']">calendar_today</fa-icon>
+          <span fxHide.sm> Reporting </span>
+          <fa-icon [icon]="['fas', 'arrow-circle-down']">keyboard_arrow_down</fa-icon>
+        </button>
+        <mat-menu #reportingMenu="matMenu" [overlapTrigger]="false">
+          <button mat-menu-item routerLink="/roomevents" class="nav-link">Room Events</button>
+          <button mat-menu-item routerLink="/roomanalytics" class="nav-link">Room Analytics</button>
+          <button mat-menu-item routerLink="/equipmentanalytics" class="nav-link">Equipment Analytics</button>
+          <button mat-menu-item routerLink="/calendar" class="nav-link">My Calendar</button>
+        </mat-menu>
+        <button mat-button (click)="navigateToAddin()">
+          <fa-icon [icon]="['fas', 'sticky-note']"></fa-icon>
+          <span fxHide.sm> Add-In </span>
+        </button>
+        <button mat-button routerLink="/contact">
+          <fa-icon [icon]="['fas', 'phone']"></fa-icon>
+          <span fxHide.sm> Contact </span>
+        </button>
+      </ng-container>
+      <span class="menu-spacer"></span>
+
+      <ng-container *ngIf="isAuthenticated()">
+        <button mat-button [matMenuTriggerFor]="profileMenu" id="profile-menu">
+          <fa-icon [icon]="['fas', 'user']">person</fa-icon>
+          <span class="buffer-left" fxHide.sm> {{userDisplayName()}} </span>
+          <fa-icon [icon]="['fas', 'arrow-circle-down']">keyboard_arrow_down</fa-icon>
+        </button>
+        <mat-menu #profileMenu="matMenu" [overlapTrigger]="false">
+          <span class="buffer-left" fxHide.sm>{{userEmail()}}</span>
+          <button mat-menu-item routerLink="/swaggerui">
+            <fa-icon [icon]="['fas', 'cloud']">cloud</fa-icon>
+            <span class="buffer-left" fxHide.sm>Swagger UI</span>
+          </button>
+          <div class="dropdown-divider"></div>
+          <button mat-menu-item (click)="signOut()">
+            <fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon>
+            <span fxHide.sm> Sign Out </span>
+          </button>
+        </mat-menu>
+      </ng-container>
+      <ng-container *ngIf="!isAuthenticated()">
+        <button mat-button (click)="signIn()">
+          <fa-icon [icon]="faSignInIcon"></fa-icon>
+          <span fxHide.sm> Sign In </span>
+        </button>
+      </ng-container>
+    </ng-container>
+  </mat-toolbar>
+</nav>

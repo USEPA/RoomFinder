@@ -1,0 +1,354 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentType": {
+      "type": "String",
+      "allowedValues": [
+        "jahunte",
+        "sleonard",
+        "testusepa",
+        "usepa"
+      ],
+      "defaultValue": "jahunte"
+    },
+    "webEnvironment": {
+      "type": "string",
+      "allowedValues": [
+        "dev-jahunte",
+        "dev-sleonard",
+        "epastaging",
+        "epaproduction"
+      ]
+    },
+    "webRelease": {
+      "type": "string"
+    },
+    "alwaysOn": {
+      "type": "Bool",
+      "defaultValue": false
+    },
+    "serverFarmSkuTier": {
+      "type": "String",
+      "defaultValue": "Basic"
+    },
+    "serverFarmSkuName": {
+      "type": "String",
+      "defaultValue": "B1"
+    },
+    "serverFarmSkuFamily": {
+      "type": "String",
+      "defaultValue": "B"
+    },
+    "workerSize": {
+      "type": "String"
+    },
+    "workerSizeId": {
+      "type": "String"
+    },
+    "numberOfWorkers": {
+      "type": "String"
+    },
+    "currentStack": {
+      "type": "String",
+      "defaultValue": "dotnetcore"
+    },
+    "enabledForDeployment": {
+      "type": "Bool",
+      "defaultValue": false
+    },
+    "enabledForTemplateDeployment": {
+      "type": "Bool",
+      "defaultValue": false
+    },
+    "enabledForDiskEncryption": {
+      "type": "Bool",
+      "defaultValue": false
+    },
+    "keyvaultsku": {
+      "defaultValue": "Standard",
+      "allowedValues": [
+        "Standard",
+        "standard",
+        "Premium",
+        "premium"
+      ],
+      "type": "String",
+      "metadata": {
+        "description": "SKU for the vault"
+      }
+    },
+    "customer": {
+      "type": "string"
+    }
+  },
+  "variables": {
+    "appInsightsName": "[concat('room-finder-ai-', parameters('environmentType'))]",
+    "webName": "[concat('room-finder-app-', parameters('environmentType'))]",
+    "keyVaultName": "[concat('room-finder-kv-', parameters('environmentType'))]",
+    "appPlanName": "room-finder-appplan",
+    "webErrorLink": "[concat('https://', variables('webName'), '.scm.azurewebsites.us/detectors?type=tools&name=eventviewer')]"
+  },
+  "resources": [
+    {
+      "type": "microsoft.insights/components",
+      "apiVersion": "2014-08-01",
+      "name": "[variables('appInsightsName')]",
+      "location": "[resourceGroup().location]",
+      "tags": {
+        "customer": "[parameters('customer')]",
+        "environment": "[parameters('environmentType')]"
+      },
+      "kind": "web",
+      "properties": {
+        "ApplicationId": "[variables('appInsightsName')]",
+        "Application_Type": "web",
+        "Request_Source": "rest"
+      }
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults",
+      "apiVersion": "2016-10-01",
+      "name": "[variables('keyVaultName')]",
+      "location": "[resourceGroup().location]",
+      "tags": {
+        "customer": "[parameters('customer')]",
+        "environment": "[parameters('environmentType')]"
+      },
+      "properties": {
+        "enabledForDeployment": "[parameters('enabledForDeployment')]",
+        "enabledForTemplateDeployment": "[parameters('enabledForTemplateDeployment')]",
+        "enabledForDiskEncryption": "[parameters('enabledForDiskEncryption')]",
+        "accessPolicies": [
+        ],
+        "tenantId": "[subscription().tenantId]",
+        "sku": {
+          "name": "[parameters('keyvaultsku')]",
+          "family": "A"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Web/serverfarms",
+      "apiVersion": "2018-02-01",
+      "name": "[variables('appPlanName')]",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+      ],
+      "tags": {
+        "customer": "[parameters('customer')]",
+        "environment": "[parameters('environmentType')]"
+      },
+      "sku": {
+        "Tier": "[parameters('serverFarmSkuTier')]",
+        "Name": "[parameters('serverFarmSkuName')]",
+        "size": "[parameters('serverFarmSkuName')]",
+        "family": "[parameters('serverFarmSkuFamily')]"
+      },
+      "kind": "app",
+      "properties": {
+        "name": "[variables('appPlanName')]",
+        "workerSize": "[parameters('workerSize')]",
+        "workerSizeId": "[parameters('workerSizeId')]",
+        "numberOfWorkers": "[parameters('numberOfWorkers')]",
+        "hostingEnvironment": ""
+      }
+    },
+    {
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2018-02-01",
+      "name": "[variables('webName')]",
+      "location": "[resourceGroup().location]",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', variables('appPlanName'))]",
+        "[resourceId('Microsoft.KeyVault/vaults', variables('keyVaultName'))]",
+        "[resourceId('microsoft.insights/components', variables('appInsightsName'))]"
+      ],
+      "tags": {
+        "customer": "[parameters('customer')]",
+        "environment": "[parameters('environmentType')]"
+      },
+      "properties": {
+        "name": "[variables('webName')]",
+        "enabled": true,
+        "reserved": false,
+        "clientAffinityEnabled": false,
+        "clientCertEnabled": false,
+        "containerSize": 0,
+        "dailyMemoryTimeQuota": 0,
+        "httpsOnly": true,
+        "siteConfig": {
+          "appSettings": [
+          ],
+          "phpVersion": "Off",
+          "javaVersion": "Off",
+          "metadata": [
+            {
+              "name": "CURRENT_STACK",
+              "value": "[parameters('currentStack')]"
+            }
+          ],
+          "alwaysOn": "[parameters('alwaysOn')]"
+        },
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appPlanName'))]",
+        "hostingEnvironment": ""
+      },
+      "resources": [
+        {
+          "type": "config",
+          "name": "appsettings",
+          "apiVersion": "2016-08-01",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/Sites', variables('webName'))]"
+          ],
+          "properties": {
+            "KeyVault:Vault": "[reference(resourceId('Microsoft.KeyVault/vaults', variables('keyVaultName')), '2018-02-14').vaultUri]",
+            "ASPNETCORE_ENVIRONMENT": "[parameters('webEnvironment')]",
+            "ASPNETCORE_RELEASE": "[parameters('webRelease')]",
+            "MSDEPLOY_RENAME_LOCKED_FILES": "1",
+            "WEBSITE_RUN_FROM_PACKAGE": "0",
+            "APPINSIGHTS_INSTRUMENTATIONKEY": "[reference(resourceId('Microsoft.Insights/components', variables('appInsightsName')), '2015-05-01').InstrumentationKey]",
+            "APPLICATIONINSIGHTS_CONNECTION_STRING": "[concat('InstrumentationKey=', reference(resourceId('Microsoft.Insights/components', variables('appInsightsName')), '2015-05-01').InstrumentationKey, ';EndpointSuffix=applicationinsights.us')]",
+            "ApplicationInsightsAgent_EXTENSION_VERSION": "~2",
+            "XDT_MicrosoftApplicationInsights_Mode": "default",
+            "ANCM_ADDITIONAL_ERROR_PAGE_LINK": "[variables('webErrorLink')]"
+          }
+        }
+      ]
+    },
+    {
+      "apiVersion": "2016-08-01",
+      "type": "Microsoft.Web/sites/siteextensions",
+      "name": "[concat(variables('webName'), '/', 'Microsoft.AspNetCore.AzureAppServices.SiteExtension')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/Sites',variables('webName'))]"
+      ],
+      "properties": {
+        "version": "2.2.0"
+      }
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/accessPolicies",
+      "name": "[concat(variables('keyVaultName'), '/add')]",
+      "apiVersion": "2018-02-14",
+      "location": "[resourceGroup().location]",
+      "tags": {
+        "customer": "[parameters('customer')]",
+        "environment": "[parameters('environmentType')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', variables('keyVaultName'))]",
+        "[resourceId('Microsoft.Web/Sites',variables('webName'))]",
+        "[resourceId('Microsoft.Insights/components', variables('appInsightsName'))]"
+      ],
+      "properties": {
+        "tenantId": "[subscription().tenantId]",
+        "accessPolicies": [
+          {
+            "tenantId": "[subscription().tenantId]",
+            "objectId": "[reference(resourceId('Microsoft.Web/sites', variables('webName')), '2016-08-01', 'Full').identity.principalId]",
+            "permissions": {
+              "keys": [
+                "get",
+                "list"
+              ],
+              "secrets": [
+                "get",
+                "list"
+              ]
+            }
+          },
+          {
+            "tenantId": "[subscription().tenantId]",
+            "objectId": "052ef579-1024-43b4-ba1d-63cfee845888",
+            "permissions": {
+              "keys": [
+                "Get",
+                "List"
+              ],
+              "secrets": [
+                "Get",
+                "List"
+              ]
+            }
+          },
+          {
+            "tenantId": "[subscription().tenantId]",
+            "objectId": "9ae5c05f-9a61-4e1a-a39c-ac114a1db10e",
+            "permissions": {
+              "keys": [
+                "all"
+              ],
+              "secrets": [
+                "all"
+              ]
+            }
+          },
+          {
+            "tenantId": "[subscription().tenantId]",
+            "objectId": "d02b6897-5d2e-4017-975d-23f3338d3492",
+            "permissions": {
+              "keys": [
+                "all"
+              ],
+              "secrets": [
+                "all"
+              ],
+              "certificates": [
+                "all"
+              ]
+            }
+          },
+          {
+            "tenantId": "[subscription().tenantId]",
+            "objectId": "c20d57e4-4021-49f2-a95a-1f1d8b30ae34",
+            "permissions": {
+              "keys": [
+              ],
+              "secrets": [
+                "get",
+                "set"
+              ],
+              "certificates": [
+                "get",
+                "list"
+              ]
+            }
+          },
+          {
+            "tenantId": "[subscription().tenantId]",
+            "objectId": "b758ae44-ced2-48ba-b016-0af53011f92e",
+            "permissions": {
+              "keys": [
+              ],
+              "secrets": [
+                "get",
+                "set"
+              ],
+              "certificates": [
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2016-10-01",
+      "name": "[concat(variables('keyVaultName'), '/ApplicationInsights--InstrumentationKey')]",
+      "location": "usgovvirginia",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', variables('keyVaultName'))]"
+      ],
+      "properties": {
+        "attributes": {
+          "enabled": true
+        },
+        "value": "[reference(resourceId('Microsoft.Insights/components', variables('appInsightsName')), '2015-05-01').InstrumentationKey]"
+      }
+    }
+  ]
+}

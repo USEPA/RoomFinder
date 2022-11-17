@@ -1,0 +1,1180 @@
+{
+  "equipment": [
+    "LCD TV",
+    "Projector",
+    "Custom Table Config",
+    "Wireless Microphone",
+    "Lapel Microphone",
+    "Lectern Microphone",
+    "PA System",
+    "Laptop",
+    "Conference",
+    "Closed Banquet",
+    "Open Banquet",
+    "Classroom",
+    "Theater"
+  ],
+  "equipmentList": [
+    "Microphone",
+    "PA",
+    "VTC",
+    "Laptop",
+    "Conference",
+    "Closed Banquet",
+    "Open Banquet",
+    "Classroom",
+    "Theater"
+  ],
+  "locations": [
+    {
+      "displayName": "AWBERC",
+      "emailAddress": "CincinnatiAWBERC@jamesiq.onmicrosoft.com"
+    },
+    {
+      "displayName": "Erlanger",
+      "emailAddress": "CincinnatiErlanger@jamesiq.onmicrosoft.com"
+    },
+    {
+      "displayName": "Annex",
+      "emailAddress": "CincinnatiAnnex@jamesiq.onmicrosoft.com"
+    }
+  ],
+  "mailboxes": [
+    {
+      "samAccountName": "Cin-Ro56547548420695",
+      "userPrincipalName": "Cin-Room-AWBERC-120@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-120@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC 120",
+      "emailAddress": "Cin-Room-AWBERC-120@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 120",
+      "resourceCapacity": 25,
+      "restrictionType": "ApprovalRequired",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV",
+        "Projector",
+        "Custom Table Config"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [
+        "Cin-Room-AWBERC-120-126@jamesiq.onmicrosoft.com"
+      ],
+      "equipmentDependencies": [
+        "Cin_AWBERC_120_VTC@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_120/126_VTC@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "ebefd55d-4b1b-4c5d-a068-7f235dc08df3",
+      "exchangeObjectId": "4d90c80c-7f8a-4c33-8065-4c638d4de3b5",
+      "guid": "4d90c80c-7f8a-4c33-8065-4c638d4de3b5"
+    },
+    {
+      "samAccountName": "Cin-Ro56547537076689",
+      "userPrincipalName": "Cin-Room-AWBERC-126@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-126@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC 126",
+      "emailAddress": "Cin-Room-AWBERC-126@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 126",
+      "resourceCapacity": 25,
+      "restrictionType": "ApprovalRequired",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV",
+        "Custom Table Config"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [
+        "Cin-Room-AWBERC-120-126@jamesiq.onmicrosoft.com"
+      ],
+      "equipmentDependencies": [
+        "Cin_AWBERC_126_VTC@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_120/126_VTC@jamesiq.onmicrosoft.com",
+        "CIN-Room-AWBERC-126-Microphone@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "0bc09552-3ee1-41e3-8249-3f0536c4c62e",
+      "exchangeObjectId": "01e22f34-059c-4cd6-9a39-85a4d8032eb0",
+      "guid": "01e22f34-059c-4cd6-9a39-85a4d8032eb0"
+    },
+    {
+      "samAccountName": "Cin-R537841506599408",
+      "userPrincipalName": "Cin-Room-AWBERC-120-126@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-120-126@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC 120/126",
+      "emailAddress": "Cin-Room-AWBERC-120-126@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 120/126",
+      "resourceCapacity": 50,
+      "restrictionType": "ApprovalRequired",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV",
+        "Wireless Microphone",
+        "Projector",
+        "Custom Table Config"
+      ],
+      "restrictedDelegates": [],
+      "dependencies": [
+        "Cin-Room-AWBERC-126@jamesiq.onmicrosoft.com",
+        "Cin-Room-AWBERC-120@jamesiq.onmicrosoft.com"
+      ],
+      "equipmentDependencies": [
+        "Cin_AWBERC_120_VTC@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_126_VTC@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_120/126_VTC@jamesiq.onmicrosoft.com",
+        "CIN-Room-AWBERC-126-Microphone@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "3e4db594-81db-4cde-b6a3-91224b80cbc4",
+      "exchangeObjectId": "931edb77-6317-44aa-a2f1-3731b80cd5d0",
+      "guid": "931edb77-6317-44aa-a2f1-3731b80cd5d0"
+    },
+    {
+      "samAccountName": "Cin-Ro53784251743711",
+      "userPrincipalName": "Cin-Room-AWBERC-130@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-130@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC 130",
+      "emailAddress": "Cin-Room-AWBERC-130@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 130",
+      "resourceCapacity": 25,
+      "restrictionType": "ApprovalRequired",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV",
+        "Custom Table Config"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [
+        "Cin-Room-AWBERC-130-138@jamesiq.onmicrosoft.com"
+      ],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "c0ff4a72-c7be-4815-8453-9baaa8cae240",
+      "exchangeObjectId": "86e5b8d4-f354-4c62-b4c9-c025e369514f",
+      "guid": "86e5b8d4-f354-4c62-b4c9-c025e369514f"
+    },
+    {
+      "samAccountName": "Cin-Ro53784-45114181",
+      "userPrincipalName": "Cin-Room-AWBERC-138@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-138@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC 138",
+      "emailAddress": "Cin-Room-AWBERC-138@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 138",
+      "resourceCapacity": 25,
+      "restrictionType": "ApprovalRequired",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV",
+        "Projector",
+        "Custom Table Config"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [
+        "Cin-Room-AWBERC-130-138@jamesiq.onmicrosoft.com"
+      ],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "d495c2bf-a32b-4e9b-89d6-758cba7d7870",
+      "exchangeObjectId": "2ecb0355-5ecd-4595-98c1-2b02fc35fbd8",
+      "guid": "2ecb0355-5ecd-4595-98c1-2b02fc35fbd8"
+    },
+    {
+      "samAccountName": "Cin-R537841432895595",
+      "userPrincipalName": "Cin-Room-AWBERC-130-138@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-130-138@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC 130/138",
+      "emailAddress": "Cin-Room-AWBERC-130-138@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 130/138",
+      "resourceCapacity": 50,
+      "restrictionType": "ApprovalRequired",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV",
+        "Projector",
+        "Wireless Microphone",
+        "Custom Table Config"
+      ],
+      "restrictedDelegates": [],
+      "dependencies": [
+        "Cin-Room-AWBERC-138@jamesiq.onmicrosoft.com",
+        "Cin-Room-AWBERC-130@jamesiq.onmicrosoft.com"
+      ],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "2c2b1d4f-0774-4e32-b9a6-bb9770086a2a",
+      "exchangeObjectId": "df845cec-f29a-4ea8-ba8c-76b100c2bc86",
+      "guid": "df845cec-f29a-4ea8-ba8c-76b100c2bc86"
+    },
+    {
+      "samAccountName": "CIN_53784-1562742706",
+      "userPrincipalName": "CIN_Room_AWBERC_203@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "CIN_Room_AWBERC_203@jamesiq.onmicrosoft.com",
+      "name": "CIN Room AWBERC 203",
+      "emailAddress": "CIN_Room_AWBERC_203@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 203",
+      "resourceCapacity": 30,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV",
+        "Wireless Microphone"
+      ],
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "5724913c-c958-4312-829c-a4d777142fea",
+      "exchangeObjectId": "1ed64698-2eb1-4c5e-af7a-0828083125a5",
+      "guid": "1ed64698-2eb1-4c5e-af7a-0828083125a5"
+    },
+    {
+      "samAccountName": "Cin-53784-2106824148",
+      "userPrincipalName": "Cin-Room-AWBERC-230@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-230@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC 230",
+      "emailAddress": "Cin-Room-AWBERC-230@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 230",
+      "resourceCapacity": 24,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "bafbe039-20a1-4aaf-bd7a-b1da23171e1c",
+      "exchangeObjectId": "48d8f40c-66c2-4ea0-a977-b17676224481",
+      "guid": "48d8f40c-66c2-4ea0-a977-b17676224481"
+    },
+    {
+      "samAccountName": "CIN_R537841739310900",
+      "userPrincipalName": "CIN_Room_AWBERC_308L-RESTRICTED@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "CIN_Room_AWBERC_308L-RESTRICTED@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC 308L-RESTRICTED",
+      "emailAddress": "CIN_Room_AWBERC_308L-RESTRICTED@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 308L RESTRICTED",
+      "resourceCapacity": 10,
+      "restrictionType": "Restricted",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "0c65488b-b73c-4341-8419-5b4facda5b22",
+      "exchangeObjectId": "067e0c75-38b6-4ffd-97da-c1a9f50026ef",
+      "guid": "067e0c75-38b6-4ffd-97da-c1a9f50026ef"
+    },
+    {
+      "samAccountName": "Cin-R537841147536755",
+      "userPrincipalName": "Cin-Room-AWBERC-402@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-402@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC 402",
+      "emailAddress": "Cin-Room-AWBERC-402@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 402",
+      "resourceCapacity": 24,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "f4a1a251-6aff-48ca-962c-c033d9197335",
+      "exchangeObjectId": "5be19891-c28c-42e4-90ee-e4ffacfbbc64",
+      "guid": "5be19891-c28c-42e4-90ee-e4ffacfbbc64"
+    },
+    {
+      "samAccountName": "Cin-Roo5378467154294",
+      "userPrincipalName": "Cin-Room-AWBERC-638@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-638@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC 638",
+      "emailAddress": "Cin-Room-AWBERC-638@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC 638",
+      "resourceCapacity": 24,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "380160b4-53ea-4315-aba6-7a2d54835999",
+      "exchangeObjectId": "9e01edcc-cda3-457b-9ee5-3090e6e214a6",
+      "guid": "9e01edcc-cda3-457b-9ee5-3090e6e214a6"
+    },
+    {
+      "samAccountName": "Cin-53784-1776511290",
+      "userPrincipalName": "Cin-Room-AWBERC-AG-30@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-AG-30@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC AG-30",
+      "emailAddress": "Cin-Room-AWBERC-AG-30@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC AG-30",
+      "resourceCapacity": 30,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "Projector",
+        "Wireless Microphone"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "441feadf-2e16-4781-81e8-b94387964929",
+      "exchangeObjectId": "68eb407a-3ed6-4e90-8b87-5bb6fb64d9fe",
+      "guid": "68eb407a-3ed6-4e90-8b87-5bb6fb64d9fe"
+    },
+    {
+      "samAccountName": "Cin-53784-1871552739",
+      "userPrincipalName": "Cin-Room-AWBERC-AUD@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-AUD@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC AUD",
+      "emailAddress": "Cin-Room-AWBERC-AUD@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC AUD",
+      "resourceCapacity": 316,
+      "restrictionType": "ApprovalRequired",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV",
+        "Projector",
+        "Wireless Microphone",
+        "VTC",
+        "Lapel Microphone",
+        "Lectern Microphone"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "72a0b55c-8227-45ec-905b-1f1db02e41bc",
+      "exchangeObjectId": "3170f116-48eb-4108-bfbf-dbc97ca2c346",
+      "guid": "3170f116-48eb-4108-bfbf-dbc97ca2c346"
+    },
+    {
+      "samAccountName": "Cin-R53784-514237423",
+      "userPrincipalName": "Cin-Room-AWBERC-Cafe-1@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-Cafe-1@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC Cafe 1",
+      "emailAddress": "Cin-Room-AWBERC-Cafe-1@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC Cafe 1",
+      "resourceCapacity": 26,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "1c1bebfa-5e34-4048-86e9-98edb3237a9c",
+      "exchangeObjectId": "36a6f6a7-a870-4c76-abcf-9f4b857b094a",
+      "guid": "36a6f6a7-a870-4c76-abcf-9f4b857b094a"
+    },
+    {
+      "samAccountName": "Cin-R53784-465124138",
+      "userPrincipalName": "Cin-Room-AWBERC-Cafe-2@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-Cafe-2@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC Cafe 2",
+      "emailAddress": "Cin-Room-AWBERC-Cafe-2@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC Cafe 2",
+      "resourceCapacity": 16,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "Projector",
+        "PA System"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "c701ff4b-a043-49e8-9895-9a096244ca94",
+      "exchangeObjectId": "0b0324cd-4eac-4941-bdf2-6d1405a93992",
+      "guid": "0b0324cd-4eac-4941-bdf2-6d1405a93992"
+    },
+    {
+      "samAccountName": "Cin_Ro53784-95188811",
+      "userPrincipalName": "Cin_Room_AWBERC_N-112-RESTRICTED@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_Room_AWBERC_N-112-RESTRICTED@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC N-112 RESTRICTED",
+      "emailAddress": "Cin_Room_AWBERC_N-112-RESTRICTED@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC N-112 RESTRICTED",
+      "resourceCapacity": 10,
+      "restrictionType": "Restricted",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Annex",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "62d1bf28-df63-45a6-88d3-2582d19b190c",
+      "exchangeObjectId": "891c63e5-8c6b-4862-8a31-b823a14b246c",
+      "guid": "891c63e5-8c6b-4862-8a31-b823a14b246c"
+    },
+    {
+      "samAccountName": "Cin_R53784-498773175",
+      "userPrincipalName": "Cin_Room_AWBERC_NG-33-RESTRICTED@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_Room_AWBERC_NG-33-RESTRICTED@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC NG-33 RESTRICTED",
+      "emailAddress": "Cin_Room_AWBERC_NG-33-RESTRICTED@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC NG-33 RESTRICTED",
+      "resourceCapacity": 10,
+      "restrictionType": "Restricted",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Annex",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "38be7245-2cbe-4ba5-94ba-d838455d74b4",
+      "exchangeObjectId": "fb514e6d-a605-4e31-877c-3c9dfd34f104",
+      "guid": "fb514e6d-a605-4e31-877c-3c9dfd34f104"
+    },
+    {
+      "samAccountName": "CIN-Ro53784748375745",
+      "userPrincipalName": "CIN-Room-AWBERC-W-116@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_Room_AWBERC_W-116@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC W-116",
+      "emailAddress": "Cin_Room_AWBERC_W-116@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC W-116",
+      "resourceCapacity": 10,
+      "restrictionType": "Restricted",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Annex",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_W-116_VTC@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "33a28a5f-a6b6-41b5-a53e-16f79d617661",
+      "exchangeObjectId": "165bdad5-a0ec-4202-9a45-383aa76ee591",
+      "guid": "165bdad5-a0ec-4202-9a45-383aa76ee591"
+    },
+    {
+      "samAccountName": "Cin-53784-1545712098",
+      "userPrincipalName": "Cin-Room-AWBERC-W-136@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin-Room-AWBERC-W-136-Restricted@jamesiq.onmicrosoft.com",
+      "name": "Cin Room AWBERC W-136",
+      "emailAddress": "Cin-Room-AWBERC-W-136-Restricted@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room AWBERC W-136 Restricted",
+      "resourceCapacity": 10,
+      "restrictionType": "Restricted",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Annex",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [
+        {
+          "userPrincipalName": "CI_IRMD-Rm-Reservation@jamesiq.onmicrosoft.com",
+          "userType": "Distribution"
+        }
+      ],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com",
+        "Cin_AWBERC_W-136_VTC@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "ad76c9d9-2253-478e-8873-e6a250ad968c",
+      "exchangeObjectId": "98523263-28b5-43c5-a4eb-304d4066c2d0",
+      "guid": "98523263-28b5-43c5-a4eb-304d4066c2d0"
+    },
+    {
+      "samAccountName": "CIN_Ro53784440284543",
+      "userPrincipalName": "CIN_Room_ERL_300@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "CIN_Room_ERL_300@jamesiq.onmicrosoft.com",
+      "name": "Cin Room ERL Main Conf",
+      "emailAddress": "Cin_Room_ERL_300@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room ERL 300",
+      "resourceCapacity": 50,
+      "restrictionType": "ApprovalRequired",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Erlanger",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV",
+        "Projector"
+      ],
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_ERL_300_VTC@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "de15ebfb-abab-4542-8719-02d2374d2b85",
+      "exchangeObjectId": "27f12a91-aad5-4b03-8e94-40d66281ff26",
+      "guid": "27f12a91-aad5-4b03-8e94-40d66281ff26"
+    },
+    {
+      "samAccountName": "CIN_53784-1248246711",
+      "userPrincipalName": "CIN_Room_ERL_301@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "CIN_Room_ERL_301@jamesiq.onmicrosoft.com",
+      "name": "CIN Room ERL 301",
+      "emailAddress": "CIN_Room_ERL_301@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room ERL 301",
+      "resourceCapacity": 10,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Erlanger",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_ERL_301_VTC@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "7cddae3b-bbfc-4af2-bde7-fe6a1066de44",
+      "exchangeObjectId": "7db9b9eb-54ea-4ca9-85b5-1a4e3cefd79a",
+      "guid": "7db9b9eb-54ea-4ca9-85b5-1a4e3cefd79a"
+    },
+    {
+      "samAccountName": "CIN_R537841563949077",
+      "userPrincipalName": "CIN_Room_ERL_302@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "CIN_Room_ERL_302@jamesiq.onmicrosoft.com",
+      "name": "CIN Room ERL 302",
+      "emailAddress": "CIN_Room_ERL_302@jamesiq.onmicrosoft.com",
+      "displayName": "Cin Room ERL 302",
+      "resourceCapacity": 15,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Erlanger",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipment": [
+        "LCD TV"
+      ],
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "equipmentDependencies": [
+        "Cin_ERL_302_VTC@jamesiq.onmicrosoft.com"
+      ],
+      "samGUID": "6cb1d710-f012-4da3-b26d-e43488f83d87",
+      "exchangeObjectId": "69ae9178-4836-4290-a54b-ee1adac3932b",
+      "guid": "69ae9178-4836-4290-a54b-ee1adac3932b"
+    }
+  ],
+  "equipments": [
+    {
+      "samAccountName": "Cin_A53784-244222438",
+      "userPrincipalName": "Cin_AWBERC_120_VTC@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_AWBERC_120_VTC@jamesiq.onmicrosoft.com",
+      "name": "Cin AWBERC 120 VTC",
+      "emailAddress": "Cin_AWBERC_120_VTC@jamesiq.onmicrosoft.com",
+      "displayName": "Cin AWBERC 120 VTC",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "VTC",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "9bdd7fe9-60bb-4d59-a496-db669e6f3d49",
+      "exchangeObjectId": "e12b35fc-8b5c-4588-bab7-3a306c5d8795",
+      "guid": "e12b35fc-8b5c-4588-bab7-3a306c5d8795"
+    },
+    {
+      "samAccountName": "Cin-Ro53784310032526",
+      "userPrincipalName": "Cin-Room-AWBERC-120-126_VTC@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_AWBERC_120/126_VTC@jamesiq.onmicrosoft.com",
+      "name": "Cin AWBERC 120/126 VTC",
+      "emailAddress": "Cin_AWBERC_120/126_VTC@jamesiq.onmicrosoft.com",
+      "displayName": "Cin AWBERC 120/126 VTC",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "43216",
+      "stateOrProvince": "OH",
+      "equipmentType": "VTC",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "bbb7a26d-f1e3-48d9-8876-0537e65a5f72",
+      "exchangeObjectId": "e2d3d593-3529-437c-b55a-3a05f19c6107",
+      "guid": "e2d3d593-3529-437c-b55a-3a05f19c6107"
+    },
+    {
+      "samAccountName": "CIN-R53784-859222707",
+      "userPrincipalName": "CIN-Room-AWBERC-126-Microphone@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "CIN-AWBERC-126-Microphone@jamesiq.onmicrosoft.com",
+      "name": "CIN-Room-AWBERC-126-Microphone",
+      "emailAddress": "CIN-AWBERC-126-Microphone@jamesiq.onmicrosoft.com",
+      "displayName": "Cin AWBERC 126 Microphone",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "Microphone",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "961282e8-07c0-47eb-87df-996d4a719c2e",
+      "exchangeObjectId": "9c24adb7-896a-4181-abd5-34ef0cc8ebef",
+      "guid": "9c24adb7-896a-4181-abd5-34ef0cc8ebef"
+    },
+    {
+      "samAccountName": "Cin_A537841095209734",
+      "userPrincipalName": "Cin_AWBERC_126_VTC@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_AWBERC_126_VTC@jamesiq.onmicrosoft.com",
+      "name": "Cin AWBERC 126 VTC",
+      "emailAddress": "Cin_AWBERC_126_VTC@jamesiq.onmicrosoft.com",
+      "displayName": "Cin AWBERC 126 VTC",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "VTC",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "025ec22e-5abd-4e88-8811-06f72f8cbb7d",
+      "exchangeObjectId": "23d4f889-8692-4416-8af9-26fd6939446b",
+      "guid": "23d4f889-8692-4416-8af9-26fd6939446b"
+    },
+    {
+      "samAccountName": "Cin_A537842034092622",
+      "userPrincipalName": "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+      "name": "Cin AWBERC Loaner Laptop 1",
+      "emailAddress": "Cin_AWBERC_Loaner_Laptop_1@jamesiq.onmicrosoft.com",
+      "displayName": "Cin AWBERC Loaner Laptop 1",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "Laptop",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "782c8a4e-11d8-4b65-9444-f6420f59eb88",
+      "exchangeObjectId": "18a3ca45-b8d4-4518-aa48-249422ac2cdd",
+      "guid": "18a3ca45-b8d4-4518-aa48-249422ac2cdd"
+    },
+    {
+      "samAccountName": "Cin_A537841553555539",
+      "userPrincipalName": "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+      "name": "Cin AWBERC Loaner Laptop 2",
+      "emailAddress": "Cin_AWBERC_Loaner_Laptop_2@jamesiq.onmicrosoft.com",
+      "displayName": "Cin AWBERC Loaner Laptop 2",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "Laptop",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "a3dd19eb-b2f7-470a-8311-ac1760e201e9",
+      "exchangeObjectId": "b5f98011-e45e-4f38-a2d4-2125789d22db",
+      "guid": "b5f98011-e45e-4f38-a2d4-2125789d22db"
+    },
+    {
+      "samAccountName": "Cin_A537841080658115",
+      "userPrincipalName": "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com",
+      "name": "Cin AWBERC Loaner Laptop 3",
+      "emailAddress": "Cin_AWBERC_Loaner_Laptop_3@jamesiq.onmicrosoft.com",
+      "displayName": "Cin AWBERC Loaner Laptop 3",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "Laptop",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "fbe19ded-d01d-4aa3-b8f7-eaf5faf66d8d",
+      "exchangeObjectId": "906d9ec3-4550-4ba8-bea8-1ff1c22061a4",
+      "guid": "906d9ec3-4550-4ba8-bea8-1ff1c22061a4"
+    },
+    {
+      "samAccountName": "Cin_53784-1274832059",
+      "userPrincipalName": "Cin_AWBERC_Mobile_Unit_VTC@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_AWBERC_Mobile_Unit_VTC@jamesiq.onmicrosoft.com",
+      "name": "Cin AWBERC Mobile Unit VTC",
+      "emailAddress": "Cin_AWBERC_Mobile_Unit_VTC@jamesiq.onmicrosoft.com",
+      "displayName": "Cin AWBERC Mobile Unit VTC",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "AWBERC",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "VTC",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "654ccf80-3060-4a8c-8935-373ba9927741",
+      "exchangeObjectId": "da602f07-4c94-4abd-add8-d49d2e193ef3",
+      "guid": "da602f07-4c94-4abd-add8-d49d2e193ef3"
+    },
+    {
+      "samAccountName": "Cin_A537841292789126",
+      "userPrincipalName": "Cin_AWBERC_W-116_VTC@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_AWBERC_W-116_VTC@jamesiq.onmicrosoft.com",
+      "name": "Cin AWBERC W-116 VTC",
+      "emailAddress": "Cin_AWBERC_W-116_VTC@jamesiq.onmicrosoft.com",
+      "displayName": "Cin AWBERC W-116 VTC",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Annex",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "VTC",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "97c8d77c-1c21-4eb6-8591-db5da8fcf9a8",
+      "exchangeObjectId": "bd767ad3-2a19-49c3-a879-bec729ee6c73",
+      "guid": "bd767ad3-2a19-49c3-a879-bec729ee6c73"
+    },
+    {
+      "samAccountName": "Cin_53784-1041565919",
+      "userPrincipalName": "Cin_AWBERC_W-136_VTC@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_AWBERC_W-136_VTC@jamesiq.onmicrosoft.com",
+      "name": "Cin AWBERC W-136 VTC",
+      "emailAddress": "Cin_AWBERC_W-136_VTC@jamesiq.onmicrosoft.com",
+      "displayName": "Cin AWBERC W-136 VTC",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoAccept",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Annex",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "VTC",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "e6820238-8422-4da4-be77-b814e8c80136",
+      "exchangeObjectId": "e0a75e21-5c60-4c76-8165-65bdbdb7c74c",
+      "guid": "e0a75e21-5c60-4c76-8165-65bdbdb7c74c"
+    },
+    {
+      "samAccountName": "Cin_53784-1476319912",
+      "userPrincipalName": "Cin_ERL_300_VTC@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_ERL_300_VTC@jamesiq.onmicrosoft.com",
+      "name": "Cin ERL 300 VTC",
+      "emailAddress": "Cin_ERL_300_VTC@jamesiq.onmicrosoft.com",
+      "displayName": "Cin ERL 300 VTC",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Erlanger",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "VTC",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "41a3ffb5-0c3f-4424-a83c-ce3b3ce7feac",
+      "exchangeObjectId": "17a32c46-2fb4-4f7b-b1a0-62ef45645929",
+      "guid": "17a32c46-2fb4-4f7b-b1a0-62ef45645929"
+    },
+    {
+      "samAccountName": "Cin_53784-1122681933",
+      "userPrincipalName": "Cin_ERL_301_VTC@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_ERL_301_VTC@jamesiq.onmicrosoft.com",
+      "name": "Cin ERL 301 VTC",
+      "emailAddress": "Cin_ERL_301_VTC@jamesiq.onmicrosoft.com",
+      "displayName": "Cin ERL 301 VTC",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Erlanger",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "VTC",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "d5c6d3f4-13c2-45b3-95a8-603dc0a7b92c",
+      "exchangeObjectId": "d66b7932-eeb8-498b-b015-504a0d52ff60",
+      "guid": "d66b7932-eeb8-498b-b015-504a0d52ff60"
+    },
+    {
+      "samAccountName": "Cin_53784-1353329480",
+      "userPrincipalName": "Cin_ERL_302_VTC@jamesiq.onmicrosoft.com",
+      "primarySmtpAddress": "Cin_ERL_302_VTC@jamesiq.onmicrosoft.com",
+      "name": "Cin ERL 302 VTC",
+      "emailAddress": "Cin_ERL_302_VTC@jamesiq.onmicrosoft.com",
+      "displayName": "Cin ERL 302 VTC",
+      "resourceCapacity": null,
+      "restrictionType": "None",
+      "bookingProcessing": "AutoUpdate",
+      "city": "Cincinnati",
+      "company": "EPA",
+      "countryOrRegion": "United States",
+      "department": "OARM",
+      "office": "Erlanger",
+      "phone": "",
+      "postalCode": "",
+      "stateOrProvince": "OH",
+      "equipmentType": "VTC",
+      "restrictedDelegates": [],
+      "dependencies": [],
+      "samGUID": "425e562c-89b9-486a-9155-e3e0b23984a7",
+      "exchangeObjectId": "7dd5bb77-6d48-477d-bcd8-388409371051",
+      "guid": "7dd5bb77-6d48-477d-bcd8-388409371051"
+    }
+  ]
+}

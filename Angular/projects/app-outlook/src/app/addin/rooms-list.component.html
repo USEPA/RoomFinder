@@ -1,0 +1,128 @@
+<div class="ms-fontSize-16">
+  <mat-accordion>
+    <mat-expansion-panel #filterPanel (opened)="changePanelState()" (closed)="changePanelState()">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Filters
+        </mat-panel-title>
+        <mat-panel-description>
+          Click to {{ filterPanel.expanded ? "Close" : "Expand" }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <table width="100%" style="width:100%">
+        <tr>
+          <td>
+            <div *ngIf="!locationTab; else useLocation">
+              <app-location-list (locationChange)="checkLocation($event)"></app-location-list>
+            </div>
+            <ng-template #useLocation>
+              <app-room-states-list #statesList (statesChange)="checkStates($event)">
+              </app-room-states-list>
+              <app-room-cities-list #citiesList (citiesChange)="checkCities($event)">
+              </app-room-cities-list>
+              <app-room-offices-list #officesList (officesChange)="checkOffices($event)">
+              </app-room-offices-list>
+              <app-room-floors-list #floorsList (floorsChange)="checkFloors($event)">
+              </app-room-floors-list>
+            </ng-template>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <app-resource-status (resourceStatusChange)="checkResourceStatus($event)"></app-resource-status>
+          </td>
+        </tr>
+        <tr>
+          <mat-form-field>
+            <input matInput placeholder="capacity" [(ngModel)]="capacity" />
+          </mat-form-field>
+        </tr>
+        <tr>
+          <td>
+            <mat-label>Equipment/Configuration</mat-label><br />
+            <mat-label>Filter rooms based on the following capabilities:</mat-label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <app-equipment-config (equipmentConfigChange)="checkEquipmentConfig($event)"></app-equipment-config>
+          </td>
+        </tr>
+      </table>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <table width="100%" style="width:100%;">
+    <tr>
+      <td>
+        <button mat-raised-button color="primary" (click)="search()">
+          Search
+        </button>
+      </td>
+    </tr>
+  </table>
+  <div class="spinner-container" *ngIf="(loading$ | async) as loadingDataSource; else loadedDataSource">
+  </div>
+  <ng-template #loadedDataSource>
+    <div fxLayout="column" *ngIf="displayDataSource">
+      <div style="padding-bottom:1.5em">
+        <table class="table-responsive" #materialTable mat-table [dataSource]="dataSource" multiTemplateDataRows>
+          <ng-container matColumnDef="{{ column.value }}" *ngFor="let column of headersToDisplay">
+            <ng-container *ngIf="column.value === 'select'; else approvalRequired">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let row; let rowdx = index">
+                <mat-checkbox id="roomSelector{{row.samAccountName}}" aria-label="Select to book room {{row.samAccountName}}." #roomCheckboxes (change)="checkRoomToggle(row)" [checked]="selectionRooms.isSelected(row)">
+                </mat-checkbox>
+              </td>
+            </ng-container>
+            <ng-template #approvalRequired>
+              <ng-container *ngIf="column.value === 'restrictionImage'; else roomAvailable">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element">
+                  <img src="../../../assets/images/{{ element.restrictionImage }}" alt="room restriction image: {{ element.restrictionImage }}" />
+                </td>
+              </ng-container>
+            </ng-template>
+            <ng-template #roomAvailable>
+              <ng-container *ngIf="column.value === 'availabilityImage'; else notSelect">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element">
+                  <img src="../../../assets/images/{{ element.availabilityImage }}" alt="room availability image: {{ element.availabilityImage }}" />
+                </td>
+              </ng-container>
+            </ng-template>
+            <ng-template #notSelect>
+              <th mat-header-cell *matHeaderCellDef>{{ column.display }}</th>
+              <td mat-cell *matCellDef="let element">
+                {{ element[column.value] }}
+              </td>
+            </ng-template>
+          </ng-container>
+
+          <ng-container matColumnDef="expandedDetail">
+            <td mat-cell *matCellDef="let element" [attr.colspan]="headersToDisplay.length">
+              <div class="table-checkbox-element-detail" [@detailExpand]="expandoRowCss(element)">
+                <ul style="list-style-type:none">
+                  <li *ngFor="let equipment of element.equipmentDependencies; let idx=index" (click)="onItemSelected(idx)">
+                    <mat-checkbox id="equipmentSelector{{element.samAccountName}}{{idx}}" aria-label="Select to book equipment {{element.samAccountName}}{{idx}}." [value]="equipment" (click)="$event.stopPropagation()" (change)="checkEquipmentToggle(equipment)" [checked]="selectionEquipment.isSelected(equipment)" [aria-label]="checkboxLabel(equipment, idx)">
+                      {{ equipment.displayName }}</mat-checkbox>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+          <tr mat-row *matRowDef="let element; columns: columnsToDisplay" class="table-checkbox-element-row" [class.table-checkbox-expanded-row]="expandedElement === element" (click)="expandoRow(element, row)"></tr>
+          <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="table-checkbox-detail-row"></tr>
+        </table>
+      </div>
+      <div class="navComponentBanner footer-sticky" fxLayout="row" fxLayoutAlign="center stretch">
+        <button mat-raised-button color="primary" (click)="addToInvite()"> Add to Invite </button>
+        <span>&nbsp;|&nbsp;</span>
+        <button mat-raised-button color="primary" (click)="recurringAvailabilityCheck()"> Recurrence Check </button>
+      </div>
+    </div>
+  </ng-template>
+</div>
+<app-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value" [backdropEnabled]="true" [positionGloballyCenter]="true" [displayProgressSpinner]="displayProgressSpinner">
+</app-progress-spinner>

@@ -1,0 +1,257 @@
+$dark: #000;
+$med-dark: #333c33;
+$medium: #727365;
+$med-light: #C9C9C9;
+$med-text: #3D3E3E;
+$light: #e6e6e6;
+$ultra-light: #fff;
+$hover-focus: #e6e6e6;
+$warning: #C7170A;
+$ok: #8ed39e;
+$alternate-background: #f2f2f8;
+
+$fontColor: black;
+
+$failure: #C7170A;
+$success: #109E57;
+$caution: #ffaa00;
+$accentA200: #ffd530;
+
+.theme-roomfinder .navbar {
+  background-color: $med-dark;
+}
+
+.mat-toolbar.mat-primary {
+  background-color: $dark;
+  color: $ultra-light !important;
+}
+
+.theme-roomfinder .navbar-brand {
+  color: $ultra-light;
+}
+
+.theme-roomfinder .navbar-brand:hover {
+  color: $ultra-light;
+}
+
+.theme-roomfinder .navbar-brand:active {
+  color: $ultra-light;
+}
+
+.theme-roomfinder .navbar-brand:focus {
+  color: $ultra-light;
+}
+
+.theme-roomfinder .nav>li>a {
+  color: $ultra-light;
+}
+
+.theme-roomfinder .nav>li>a:hover {
+  background-color: transparent;
+}
+
+.theme-roomfinder .nav>li>a:focus {
+  background-color: transparent;
+}
+
+.theme-roomfinder .nav .open>a {
+  background-color: transparent;
+}
+
+.theme-roomfinder .nav .open>a:hover {
+  background-color: transparent;
+}
+
+.theme-roomfinder .nav .open>a:focus {
+  background-color: transparent;
+}
+
+.theme-roomfinder .bars {
+  color: $ultra-light;
+}
+
+.theme-roomfinder .sidebar .menu .list li.active {
+  background-color: transparent;
+}
+
+.theme-roomfinder .sidebar .menu .list li.active> :first-child i,
+.theme-roomfinder .sidebar .menu .list li.active> :first-child span {
+  color: $medium;
+}
+
+.theme-roomfinder .sidebar .menu .list .toggled {
+  background-color: transparent;
+}
+
+.theme-roomfinder .sidebar .menu .list .ml-menu {
+  background-color: transparent;
+}
+
+.theme-roomfinder .sidebar .legal {
+  background-color: $ultra-light;
+}
+
+.theme-roomfinder .sidebar .legal .copyright a {
+  color: $medium !important;
+}
+
+.mat-header-row {
+  background-color: $med-dark;
+}
+
+.small-scale-icon.mat-icon {
+  transform: scale(.75);
+  vertical-align: top;
+  color: $medium;
+  background-color: $ultra-light;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.mat-icon.ic_18px {
+  max-width: 18px !important;
+  max-height: 18px !important;
+}
+
+.mat-tab-header {
+  border-style: solid solid none solid !important;
+  border-width: .2em !important;
+  border-color: $medium !important;
+}
+
+.mat-tab-body-wrapper {
+  padding: 0 2em 2em 2em !important;
+  border-style: none solid solid solid !important;
+  border-width: .2em !important;
+  border-color: $medium !important;
+}
+
+.mat-tab-labels {
+  background-color: $medium;
+  font-weight: 700;
+  opacity: 1 !important;
+}
+
+.mat-accordion-header {
+  border-bottom: none;
+  color: $ultra-light;
+  background: $med-dark;
+  padding-left: 1.5rem;
+  padding-right: 2rem;
+}
+
+.mat-sort-header-arrow {
+  color: $med-light;
+}
+
+.drag-drop-header {
+  background-color: $med-dark;
+  color: $ultra-light;
+  height: 56px;
+  align-items: center;
+  min-height: 56px;
+  align-items: center;
+}
+
+.drag-drop-row:hover {
+  background: $light !important;
+}
+
+.data-summary-icon {
+  background-color: $dark;
+}
+
+.data-summary-content {
+  color: $ultra-light;
+  background-color: $medium;
+}
+
+
+.chart-legend .legend-label {
+  color: $dark !important;
+}
+
+.mat-expansion-panel-header:focus {
+  background-color: $hover-focus !important;
+}
+
+.mat-row:hover {
+  background-color: $hover-focus !important;
+}
+
+.dashboard-title {
+  color: $ultra-light;
+  background-color: $med-dark;
+  padding-left: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+}
+
+.new-dashboard {
+  background-color: $med-light;
+}
+
+.main-content {
+  background-color: $ultra-light;
+}
+
+.mat-row:nth-child(even) {
+  background-color: $ultra-light;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: $alternate-background;
+}
+
+.mat-raised-button:hover,
+.mat-raised-button:focus {
+  background-color: darken($accentA200, 15%);
+}
+
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 4rem 2rem;
+  }
+}
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 0;
+}
+
+
+
+.nav-fill .nav-item {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.nav-justified .nav-item {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.pickerdate {
+  color: $med-text;
+}
+
+.pickerlabel {
+  color: $med-text;
+}
+
+.pickertext {
+  color: $med-text;
+}

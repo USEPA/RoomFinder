@@ -1,0 +1,280 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "outlookaddin": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/app-outlook/",
+      "sourceRoot": "projects/app-outlook/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "../DotNet/src/OutlookRoomFinder.Web/wwwroot/apps/outlook",
+            "index": "projects/app-outlook/src/index.html",
+            "main": "projects/app-outlook/src/main.ts",
+            "polyfills": "projects/app-outlook/src/polyfills.ts",
+            "tsConfig": "projects/app-outlook/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/app-outlook/src/assets",
+              "projects/app-outlook/src/favicon.ico"
+            ],
+            "styles": [
+              "projects/app-outlook/src/styles.scss"
+            ],
+            "scripts": [],
+            "baseHref": "/apps/outlook/"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/app-outlook/src/environments/environment.ts",
+                  "with": "projects/app-outlook/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ]
+            },
+            "es5": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "tsConfig": "projects/app-outlook/tsconfig.es5.app.json"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "outlookaddin:build",
+            "port": 4200,
+            "publicHost": "http://localhost:4200",
+            "baseHref": "/apps/outlook/",
+            "servePath": "/"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "outlookaddin:build:production"
+            },
+            "es5": {
+              "browserTarget": "outlookaddin:build:es5"
+            }
+          }
+        },
+        "serve-e2e": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "outlookaddin:build",
+            "port": 4200,
+            "publicHost": "http://localhost:4200/apps/outlook/",
+            "baseHref": "/apps/outlook/",
+            "servePath": "/apps/outlook/"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "outlookaddin:build:production"
+            },
+            "es5": {
+              "browserTarget": "outlookaddin:build:es5"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "outlookaddin:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "tsConfig": "./tsconfig.spec.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/app-outlook/tsconfig.app.json",
+              "projects/app-outlook/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/app-outlook/e2e/protractor.conf.all-spec.js",
+            "devServerTarget": "outlookaddin:serve-e2e"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "outlookaddin:serve:production"
+            },
+            "ci": {
+              "protractorConfig": "projects/app-outlook/e2e/protractor.conf.all-spec.js"
+            }
+          }
+        }
+      }
+    },
+    "reporting": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/app-reporting/",
+      "sourceRoot": "projects/app-reporting/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "../DotNet/src/OutlookRoomFinder.Web/wwwroot/apps/reporting",
+            "index": "projects/app-reporting/src/index.html",
+            "main": "projects/app-reporting/src/main.ts",
+            "polyfills": "projects/app-reporting/src/polyfills.ts",
+            "tsConfig": "projects/app-reporting/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/app-reporting/src/assets",
+              "projects/app-reporting/src/favicon.ico"
+            ],
+            "styles": [
+              "node_modules/swagger-ui-dist/swagger-ui.css",
+              "projects/app-reporting/src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/swagger-ui-dist/swagger-ui-bundle.js",
+              "node_modules/swagger-ui-dist/swagger-ui-standalone-preset.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/app-reporting/src/environments/environment.ts",
+                  "with": "projects/app-reporting/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ]
+            },
+            "es5": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "tsConfig": "projects/app-reporting/tsconfig.es5.app.json"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "reporting:build",
+            "publicHost": "http://localhost:4201",
+            "port": 4201
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "reporting:build:production"
+            },
+            "es5": {
+              "browserTarget": "reporting:build:es5"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "reporting:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run"
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/app-reporting/tsconfig.app.json",
+              "projects/app-reporting/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/app-reporting/e2e/protractor.conf.all-spec.js",
+            "devServerTarget": "reporting:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "reporting:serve:production"
+            },
+            "ci": {
+              "protractorConfig": "projects/app-reporting/e2e/protractor.conf.all-spec.js"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "outlookaddin"
+}

@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>VTC Request Form</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="vtcData.firstLastName" placeholder="First and Last Name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="vtcData.phoneNumber" placeholder="Phone Number">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="vtcData.emailAddress" placeholder="emailAddress Address">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="vtcData.numberOfAttendees" placeholder="Number of Attendees">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="vtcData.purposeOfConference" placeholder="Purpose of Conference">
+  </mat-form-field>
+  <mat-label>Conference Type</mat-label>
+  <div *ngFor="let item of vtcData.conferenceTypes">
+    <mat-checkbox [(ngModel)]="item.checked" (change)="getCheckboxes()">{{item.name}}</mat-checkbox>
+  </div>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="vtcData.audioConnectionInfo" placeholder="Audio Connection Info" cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5">
+        </textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="vtcData.locationOfHost" placeholder="Location of Host">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="vtcData.locationsConnectedWith" placeholder="Location(s) Connected With">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="vtcData.comment" placeholder="Comment" cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5">
+        </textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" [mat-dialog-close]="vtcData" cdkFocusInitial>Submit</button>
+  <button mat-raised-button color="primary" (click)="onNoClick()">Cancel</button>
+</div>

@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/_theming';
+@import "~office-ui-fabric-core/dist/css/fabric.css";
+@include mat-core();
+
+$dark: #000;
+$med-dark: #464545;
+$medium: #727365;
+$med-light: #C9C9C9;
+$light: #e6e6e6;
+$ultra-light: #fff;
+$hover-focus: #e6e6e6;
+$warning: #e35c5c;
+$ok: #8ed39e;
+$alternate-background: #f2f2f8;
+
+$fontColor: black;
+
+$failure: #e35c5c;
+$success: #11BA99;
+$caution: #ffaa00;
+$accentA200: #58564b;
+
+
+.mat-header-row {
+  background-color: $med-dark;
+}
+
+.main-content {
+  background-color: $ultra-light;
+}
+
+.mat-menu-panel {
+  min-width: 125px !important;
+  max-width: 380px !important;
+  margin-top: 1em;
+  padding: 15px !important;
+}
+
+.mat-raised-button {
+  margin-left: 1em;
+  // margin: 10px;
+}
+
+.mat-raised-button:hover,
+.mat-raised-button:focus {
+  background-color: darken($accentA200, 15%);
+}
+
+
+$my-app-primary: mat-palette($mat-blue-grey);
+$my-app-accent: mat-palette($mat-light-blue, 200, 800, A400);
+$my-app-warn: mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);

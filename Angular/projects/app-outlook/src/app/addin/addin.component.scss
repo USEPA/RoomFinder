@@ -1,0 +1,112 @@
+table {
+  width: 100%;
+}
+
+tr.table-checkbox-detail-row {
+  height: 0;
+}
+
+tr.table-checkbox-element-row:not(.table-checkbox-expanded-row):hover {
+  background: #777;
+}
+
+tr.table-checkbox-element-row:not(.table-checkbox-expanded-row):active {
+  background: #efefef;
+}
+
+.table-checkbox-element-row td {
+  border-bottom-width: 0;
+}
+
+.table-checkbox-element-detail {
+  overflow: hidden;
+  /* display: flex; */
+}
+
+.table-checkbox-element-descriptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.table-checkbox-element-description {
+  padding: 16px;
+  width: 100%;
+}
+
+.table-checkbox-element-description__cell {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.table-checkbox-element-description__header {
+  color: #777;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.table-checkbox-element-description__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.table-checkbox-element-description__content div,
+.table-checkbox-element-description__header div {
+  width: 5%;
+}
+
+.table-checkbox-element-description-attribution {
+  opacity: 0.5;
+}
+
+.mat-header-cell {
+  flex-direction: column;
+  justify-content: left;
+}
+
+.mat-cell {
+  text-align: left;
+  justify-content: left;
+  font-size: 11.5px;
+  padding-left: 5px;
+}
+
+.mat-checkbox ::ng-deep .mat-checkbox-inner-container-no-side-margin {
+  margin: 10px 8px auto 0;
+}
+
+.mat-accordion {
+  margin: 5px;
+}
+
+.navComponentBanner {
+  background-color: rgb(131, 133, 131);
+  color: white;
+  text-align: center;
+  height: 1.4em;
+}
+
+.footer-sticky {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: column;
+
+}

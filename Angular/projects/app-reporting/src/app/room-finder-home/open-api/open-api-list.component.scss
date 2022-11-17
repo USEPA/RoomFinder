@@ -1,0 +1,9 @@
+// hide url because open api spec file requires authentication
+::ng-deep span.url {
+  display: none !important;
+}
+
+// hide authorize button because its configure to attach token on request
+::ng-deep div.auth-wrapper {
+  display: none !important;
+}

@@ -1,0 +1,72 @@
+@import '~@angular/material/_theming';
+@include mat-core();
+
+
+$mat-roomfinder-primary: (50 : #f7f7f7,
+  100 : #dcdcdc,
+  200 : #c2c2c2,
+  300 : #727565,
+  400 : #52584c,
+  500 : #333c33,
+  600 : #262d26,
+  700 : #191e19,
+  800 : #0c0f0c,
+  900 : #000000,
+  A100 : #dcdcdc,
+  A200 : #c2c2c2,
+  A400 : #52584c,
+  A700 : #191e19,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  ));
+
+
+$mat-roomfinder-accent: (50 : #fffae6,
+  100 : #fff2c1,
+  200 : #ffea98,
+  300 : #ffe26e,
+  400 : #ffdb4f,
+  500 : #ffd530,
+  600 : #ffd02b,
+  700 : #ffca24,
+  800 : #ffc41e,
+  900 : #ffba13,
+  A100 : #fff2c1,
+  A200 : #ffd530,
+  A400 : #ffca24,
+  A700 : #ffba13,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  ));
+
+$custom-theme-primary: mat-palette($mat-roomfinder-primary);
+$custom-theme-accent: mat-palette($mat-roomfinder-accent, A200, A100, A400);
+$custom-theme-warn: mat-palette($mat-red);
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+
+
+@include angular-material-theme($custom-theme);

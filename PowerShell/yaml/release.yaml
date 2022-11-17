@@ -1,0 +1,74 @@
+variables:
+  env.name: 'epaproduction'
+  SourceAlias: 'EnhancedRoomOutlookAddIn-CI'
+  WebDeployFileName: 'OutlookRoomFinder.Web.zip'
+  iis.appPool: 'RoomFinderAddIn'
+  iis.appRootDir: 'C:\USEPA\RoomFinder\wwwroot'
+  Parameters.IISDeploymentType: 'IIS Website'
+  Parameters.ActionIISWebsite: 'Create Or Update'
+  Parameters.WebsiteName: 'Default Web Site'
+
+jobs:
+- job: 'IIS Deployment'
+  displayName: 'Run on deployment group'
+  demands: 
+    tags: 'iis-deploy, green'
+  steps:
+  - task: CmdLine@2
+    inputs:
+      script: |
+        echo Stopping the App Pool
+        %SYSTEMROOT%\System32\inetsrv\appcmd stop appPool /apppool.name:$(iis.appPool) | exit 0
+        displayName: 'stop app pool'
+  - task: PowerShell@2
+    displayName: 'IIS Environment settings'
+    inputs:
+      targetType: 'inline'
+      script: |
+        # Extracting DropFile
+        Write-Host "IIS Extract folder for deployment purposes"
+        $buildId = "$(Build.BuildNumber)"
+        $envName = "$(env.name)"
+        $zipFile = "$(System.DefaultWorkingDirectory)\$(SourceAlias)\drop\$(WebDeployFileName)"
+        $iisDestination = ("$(iis.appRootDir)\versions\{0}.zip" -f $buildId)
+        
+        
+        Write-Host ("copying zip file {0} into {1}" -f $zipFile, $iisDestination)
+        Copy-Item -Path $zipFile -DestinationPath $iisDestination -Force -Verbose:$VerbosePreference
+        
+        [System.Environment]::SetEnvironmentVariable('ASPNETCORE_ENVIRONMENT', $envName, [System.EnvironmentVariableTarget]::Machine)
+        [System.Environment]::SetEnvironmentVariable('ASPNETCORE_RELEASE', $buildId, [System.EnvironmentVariableTarget]::Machine)
+  - task: CmdLine@2
+    inputs:
+      script: |
+        echo Starting the App Pool
+        %SYSTEMROOT%\System32\inetsrv\appcmd start appPool $(iis.appPool)
+    displayName: 'start app pool'
+    condition: succeededOrFailed()
+  - task: IISWebAppManagementOnMachineGroup@0
+    displayName: 'manage iis instance'
+    inputs:
+      IISDeploymentType: '$(Parameters.IISDeploymentType)'
+      ActionIISWebsite: '$(Parameters.ActionIISWebsite)'
+      WebsiteName: '$(Parameters.WebsiteName)'
+      WebsitePhysicalPath: '%SystemDrive%\USEPA\RoomFinder\wwwroot\root'
+      AddBinding: '$(Parameters.AddBinding)'
+      Bindings: '$(Parameters.Bindings)'
+      CreateOrUpdateAppPoolForWebsite: true
+      AppPoolNameForWebsite: RoomFinderAddIn
+      DotNetVersionForWebsite: 'No Managed Code'
+      AppPoolIdentityForWebsite: NetworkService
+      ParentWebsiteNameForVD: '$(Parameters.WebsiteName)'
+      VirtualPathForVD: '$(Parameters.VirtualPathForApplication)'
+      ParentWebsiteNameForApplication: '$(Parameters.WebsiteName)'
+      VirtualPathForApplication: '$(Parameters.VirtualPathForApplication)'
+      AppPoolName: '$(Parameters.AppPoolName)'
+  - task: IISWebAppDeploymentOnMachineGroup@0
+    displayName: 'deploy iis code'
+    inputs:
+      WebSiteName: '$(Parameters.WebsiteName)'
+      Package: '$(System.DefaultWorkingDirectory)\$(SourceAlias)\drop\$(WebDeployFileName)'
+      RemoveAdditionalFilesFlag: true
+      TakeAppOfflineFlag: True
+      XmlVariableSubstitution: True
+      JSONFiles: '**/appsettings.json'      

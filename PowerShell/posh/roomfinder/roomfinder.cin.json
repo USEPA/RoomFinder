@@ -1,0 +1,10 @@
+﻿{
+  "AdminCredName": "addinRoomFinder",
+  "TenantID": "usepa.onmicrosoft.com",
+  "roomResourceJSON": ".\\Scripting\\mailboxes\\resources-objects.epaproduction.json",
+  "RenamedMailboxesCsv": ".\\Scripting\\config\\RoomFinder-mailbox-renames.cin.csv",
+  "appmanifestxml": ".\\Scripting\\manifest\\OutlookRoomFinder-cin-gaway004.xml",
+  "RoomFinderSvcAccount": "svc_roomandresource@epa.gov",
+  "RoomFinderDistroGroup": "roomfinderaddin@usepa.onmicrosoft.com",
+  "RoomFinderAddInName": "Room Availability - CIN"
+}

@@ -1,0 +1,121 @@
+@import '../../../assets/styles/themes/theme-main.scss';
+
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+.roomfinder-nav {
+  /* for spacing purposes
+  margin-top: 1em;*/
+  font-size: 1em;
+  background-color: $med-dark;
+  color: $ultra-light !important;
+}
+
+.mat-toolbar[color="primary"] {
+  color: $ultra-light !important;
+}
+
+.mat-toolbar .mat-primary {
+  background-color: $med-dark !important;
+  color: $ultra-light !important;
+}
+
+.roomfinder .navbar-brand {
+  color: $ultra-light !important;
+}
+
+.logo {
+  z-index: 3;
+}
+
+.buffer-left {
+  padding-left: 0.5em;
+}
+
+.mat-button:hover,
+.mat-button:focus {
+  text-decoration: underline;
+}
+
+a {
+  color: $ultra-light !important;
+}
+
+.mat-button {
+  color: $ultra-light !important;
+  background-color: $dark !important;
+}
+
+.mat-button:hover {
+  background-color: $med-dark !important;
+}
+
+.navbar-brand {
+  color: $ultra-light;
+}
+
+.navbar-brand:hover {
+  color: $ultra-light;
+}
+
+.navbar-brand:active {
+  color: $ultra-light;
+}
+
+.navbar-brand:focus {
+  color: $ultra-light;
+}
+
+.nav>li>a {
+  color: $ultra-light;
+}
+
+.nav>li>a:hover {
+  background-color: transparent;
+}
+
+.nav>li>a:focus {
+  background-color: transparent;
+}
+
+.nav .open>a {
+  background-color: transparent;
+}
+
+.nav .open>a:hover {
+  background-color: transparent;
+}
+
+.nav .open>a:focus {
+  background-color: transparent;
+}
+
+.bars {
+  color: $ultra-light;
+}
+
+.sidebar .menu .list li.active {
+  background-color: transparent;
+}
+
+.sidebar .menu .list li.active> :first-child i,
+.sidebar .menu .list li.active> :first-child span {
+  color: $medium;
+}
+
+.sidebar .menu .list .toggled {
+  background-color: transparent;
+}
+
+.sidebar .menu .list .ml-menu {
+  background-color: transparent;
+}
+
+.sidebar .legal {
+  background-color: $ultra-light;
+}
+
+.sidebar .legal .copyright a {
+  color: $medium !important;
+}

@@ -1,0 +1,3 @@
+<div *ngFor="let status of resourceStatusFilter">
+  <mat-checkbox [(ngModel)]="status.checked" (ngModelChange)="resourceStatusChanged()">{{status.value}}</mat-checkbox>
+</div>

@@ -1,0 +1,46 @@
+<div fxLayout="column" class="padding-bottom-sm">
+  <div class="jumbotron">
+    <h1>Room Finder</h1>
+    <p class="lead">An application to provide insight into conference rooms and equipment for the Outlook Room Finder Add-In</p>
+    <div *ngIf="isAuthenticated(); then welcomeUser else signInPrompt"></div>
+    <ng-template #welcomeUser>
+      <h4>Welcome {{ userDisplayName() }}!</h4>
+      <p>Use the navigation bar at the top of the page to get started or select one of the reports below.</p>
+    </ng-template>
+    <ng-template #signInPrompt>
+      <a href="javascript:undefined" class="btn btn-primary btn-large" role="button" (click)="signIn()">Click here to sign in</a>
+    </ng-template>
+  </div>
+  <div *ngIf="isAuthenticated(); then showReportLinks else hideReportLinks"></div>
+  <ng-template #showReportLinks>
+    <div fxFlex class="main-content" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap=".75em" fxLayoutGap.xs="0">
+      <div fxFlex="33%" class="nav-fill">
+        <div class="nav-item">
+          <a routerLink="/roomevents" class="nav-link" routerLinkActive="active">
+            <h2>Room Events</h2>
+          </a>
+        </div>
+        <p>Provides a collection of "Rooms" and the ability to display events for a specified time frame.</p>
+      </div>
+      <div fxFlex="34%" class="nav-fill">
+        <div class="nav-item">
+          <a routerLink="/roomanalytics" class="nav-link" routerLinkActive="active">
+            <h2>Room Analytics</h2>
+          </a>
+        </div>
+        <p>Provides a collection of analytics for specified rooms</p>
+      </div>
+      <div fxFlex="33%" class="nav-fill">
+        <div class="nav-item">
+          <a routerLink="/equipmentanalytics" class="nav-link" routerLinkActive="active">
+            <h2>Equipment Analytics</h2>
+          </a>
+        </div>
+        <p>Provides a collection of analytics for specified equipment</p>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #hideReportLinks>
+  </ng-template>
+
+</div>

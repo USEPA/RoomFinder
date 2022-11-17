@@ -1,0 +1,11 @@
+﻿{
+  "AdminCredName": "addinRoomFinderSIQ",
+  "TenantID": "shawniq.onmicrosoft.com",
+  "roomResourceJSON": ".\\Scripting\\mailboxes\\resources-objects.dev-sleonard.json",
+  "RenamedMailboxesCsv": ".\\Scripting\\config\\RoomFinder-mailbox-renames.dev.csv",
+  "appmanifestxml": ".\\Scripting\\manifest\\manifest-ssl.xml",
+  "RoomFinderSvcAccount": "sleonard@shawniq.onmicrosoft.com",
+  "RoomFinderDistroGroup": "",
+  "RoomFinderAddInName": "Room Availability - Dev",
+  "RoomFinderAddInUsersCsv": ".\\config\\RoomFinder-users.dev.csv"
+}

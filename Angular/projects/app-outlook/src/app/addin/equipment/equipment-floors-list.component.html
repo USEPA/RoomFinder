@@ -1,0 +1,10 @@
+<div>
+  <mat-form-field>
+    <mat-label class="ms-fontSize-16">Floors</mat-label>
+    <mat-select [(value)]="selectFloors" placeholder="Floors" [(ngModel)]="selectFloors" (ngModelChange)="floorsChanged()">
+      <mat-option *ngFor="let floor of floors" [value]="floor.value">
+        {{floor.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

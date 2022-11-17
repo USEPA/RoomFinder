@@ -1,0 +1,206 @@
+/*
+ Pre-Deployment Script							
+*/
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'PrimaryOwner'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	PrimaryOwner varchar(255)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'Owners'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	Owners varchar(MAX)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamDisplayName'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamDisplayName varchar(255)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamDescription'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamDescription varchar(MAX)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamInternalId'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamInternalId varchar(255)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamClassification'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamClassification varchar(255)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamSpecialization'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamSpecialization varchar(255)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamVisibility'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamVisibility varchar(255)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamDiscoverySettings'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamDiscoverySettings varchar(255)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamResponseHeaders'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamResponseHeaders varchar(MAX)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamStatusCode'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamStatusCode varchar(255)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamIsArchived'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamIsArchived bit
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'TeamWebUrl'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	TeamWebUrl varchar(255)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'ReportRefreshDate'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	ReportRefreshDate datetime
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'IsDeleted'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	IsDeleted bit
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'LastActivityDate'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	LastActivityDate datetime
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'MemberCount'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	MemberCount bigint
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'ExchangeReceivedEmailCount'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	ExchangeReceivedEmailCount bigint
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'SharePointActiveFileCount'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	SharePointActiveFileCount bigint
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'ExchangeMailboxTotalItemCount'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	ExchangeMailboxTotalItemCount bigint
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'ExchangeMailboxStorageUsed_Byte'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	ExchangeMailboxStorageUsed_Byte bigint
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'SharePointTotalFileCount'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	SharePointTotalFileCount bigint
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'SharePointSiteStorageUsed_Byte'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	SharePointSiteStorageUsed_Byte bigint
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'ReportPeriod'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	ReportPeriod varchar(255)
+END
+
+
+IF (NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'AnalyticsO365Groups' AND COLUMN_NAME = 'IsSiteProvisioned'))
+BEGIN
+ALTER TABLE [dbo].[AnalyticsO365Groups]
+ADD 
+	IsSiteProvisioned bit
+END
+
+
+
+

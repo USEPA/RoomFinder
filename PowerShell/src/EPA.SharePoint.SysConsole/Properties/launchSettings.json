@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EPA.SharePoint.SysConsole": {
+      "commandName": "Project",
+      "commandLineArgs": "scanEpaAppSchedule --deep-scan --write-files -l schedulesharpappscan.txt"
+    }
+  }
+}

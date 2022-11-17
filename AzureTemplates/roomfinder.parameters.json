@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "environmentType": {
+            "value": "jahunte"
+        },
+        "webEnvironment": {
+            "value": "dev-jahunte"
+        },
+        "webRelease": {
+            "value": "1.1.20191016.66"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "serverFarmSkuTier": {
+            "value": "Basic"
+        },
+        "serverFarmSkuName": {
+            "value": "B1"
+        },
+        "serverFarmSkuFamily": {
+            "value": "B"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "currentStack": {
+            "value": "dotnetcore"
+        },
+        "enabledForDeployment": {
+            "value": false
+        },
+        "enabledForTemplateDeployment": {
+            "value": false
+        },
+        "enabledForDiskEncryption": {
+            "value": false
+        },
+        "keyvaultsku": {
+            "value": "Standard"
+        },
+        "customer": {
+            "value": "epa"
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<div class="jumbotron">
+  <table>
+    <tr>
+      <td>
+        <mat-form-field>
+          <mat-label class="pickerlabel">Choose a Start Date</mat-label>
+          <input matInput [matDatepicker]="startDatePicker" class="pickerdate" [formControl]="startDate" (dateChange)="startDateChange($event)" required>
+          <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #startDatePicker></mat-datepicker>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-label class="pickerlabel">Choose an End Date</mat-label>
+          <input matInput [matDatepicker]="endDatePicker" class="pickerdate" [formControl]="endDate" (dateChange)="endDateChange($event)" required>
+          <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #endDatePicker></mat-datepicker>
+        </mat-form-field>
+      </td>
+      <td>
+        <button mat-raised-button color="primary" (click)="runReport()">
+          Search
+        </button>
+      </td>
+    </tr>
+  </table>
+  <mat-form-field>
+    <mat-label class="pickerlabel">Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. 03:00">
+  </mat-form-field>
+  <div class="mat-elevation-z8">
+    <mat-table #calendarTable [dataSource]="dataSource" class="modal-container" matSort>
+      <ng-container matColumnDef="equipmentName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Equipment Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.equipmentName }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="numberOfMeetings">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Number of Meetings</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.numberOfMeetings }}</mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 15, 20, 25, 50]"></mat-paginator>
+  </div>
+  <app-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value" [backdropEnabled]="true" [positionGloballyCenter]="true" [displayProgressSpinner]="displayProgressSpinner">
+  </app-progress-spinner>
+</div>

@@ -1,0 +1,64 @@
+.mat-expansion-panel-header[aria-expanded="true"] {
+  background: #e6e6e6 !important;
+}
+
+::ng-deep .noPaddingExpansionPanel .mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+// Copied from https://github.com/angular/material2/blob/master/src/lib/table/table.scss
+/* START COPY */
+$mat-header-row-height: 4em;
+$mat-row-height: 3.5em;
+$mat-row-horizontal-padding: 1.5em;
+
+.mat-table {
+  display: block;
+}
+
+.mat-header-row {
+  min-height: $mat-header-row-height;
+}
+
+.mat-row {
+  min-height: $mat-row-height;
+}
+
+.mat-header-cell {
+  color: white;
+  font-weight: 400;
+}
+
+.mat-cell:first-child,
+.mat-header-cell:first-child {
+  padding-left: $mat-row-horizontal-padding;
+}
+
+.mat-cell:last-child,
+.mat-header-cell:last-child {
+  padding-right: $mat-row-horizontal-padding;
+}
+
+.mat-cell,
+.mat-header-cell {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  word-wrap: break-word;
+  min-height: inherit;
+  height: 1.5em; // IE center align bug fix
+}
+
+.mat-cell-icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  word-wrap: break-word;
+  min-height: inherit;
+  height: 1.5em; // IE center align bug fix  
+}
+
+/* END COPY */

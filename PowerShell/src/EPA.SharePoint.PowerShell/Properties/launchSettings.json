@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EPA.SharePoint.PowerShell": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "LocalDevelopment"
+      }
+    }
+  }
+}

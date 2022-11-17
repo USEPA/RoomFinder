@@ -1,0 +1,22 @@
+<h1>Calendar</h1>
+<mat-table #calendarTable [dataSource]="dataSource" class="modal-container" matSort (matSortChange)='onSortChange($event)'>
+  <ng-container matColumnDef="Organizer">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Organizer</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.organizer.emailAddress.name }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="subject">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Subject</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.subject }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="Start">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Start</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.start?.dateTime | zuluDateFormat: militaryDateTimeFormat }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="End">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>End</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element.end?.dateTime | zuluDateFormat: militaryDateTimeFormat }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>

@@ -1,0 +1,104 @@
+<div class="jumbotron">
+  <table>
+    <tr>
+      <td>
+        <mat-form-field>
+          <mat-label class="pickerlabel">Choose a Start Date</mat-label>
+          <input matInput [matDatepicker]="startDatePicker" class="pickerdate" [formControl]="startDate" (dateChange)="startDateChange($event)" required>
+          <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #startDatePicker></mat-datepicker>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-label class="pickerlabel">Choose an End Date</mat-label>
+          <input matInput [matDatepicker]="endDatePicker" class="pickerdate" [formControl]="endDate" (dateChange)="endDateChange($event)" required>
+          <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #endDatePicker></mat-datepicker>
+        </mat-form-field>
+      </td>
+      <td>
+        <app-report-room-listing #roomsList (roomsChange)=checkRooms($event)></app-report-room-listing>
+      </td>
+      <td>
+        <button mat-raised-button color="primary" (click)="runReport()">
+          Search
+        </button>
+      </td>
+    </tr>
+  </table>
+  <mat-form-field>
+    <mat-label class="pickerlabel">Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event.target.value)" class="pickertext" placeholder="Ex. 03:00">
+  </mat-form-field>
+  <div class="mat-elevation-z8">
+    <mat-table #calendarTable [dataSource]="dataSource" class="modal-container" matSort>
+      <ng-container matColumnDef="location">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Location</mat-header-cell>
+        <mat-cell *matCellDef="let element" title="{{element.LocationEmail}}">{{ element.location }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="organizerName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Organizer</mat-header-cell>
+        <mat-cell *matCellDef="let element" title="{{ element.OrganizerEmail }}">{{ element.organizerName }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="subject">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Subject</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.subject }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="startTimeString">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Start</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.startTimeString }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="endTimeString">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>End</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.endTimeString }}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="isOnlineMeeting">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Skype/Teams?</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <div *ngIf="element.isOnlineMeeting; else isNotOnlineMeeting">Yes</div>
+          <ng-template #isNotOnlineMeeting>
+            No
+          </ng-template>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="isAllDayEvent">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>All Day?</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <div *ngIf="element.isAllDayEvent; else isNotAllDayEvent">Yes</div>
+          <ng-template #isNotAllDayEvent>
+            No
+          </ng-template>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="isRecurring">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Recurring?</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <div *ngIf="element.isRecurring; else isNotRecurring">Yes</div>
+          <ng-template #isNotRecurring>
+            No
+          </ng-template>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="isCancelled">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Cancelled?</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <div *ngIf="element.isCancelled; else isNotCancelled">Yes</div>
+          <ng-template #isNotCancelled>
+            No
+          </ng-template>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="timeZone">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Time Zone</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.timeZone }}</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 15, 20, 25, 50]"></mat-paginator>
+  </div>
+  <app-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value" [backdropEnabled]="true" [positionGloballyCenter]="true" [displayProgressSpinner]="displayProgressSpinner">
+  </app-progress-spinner>
+</div>

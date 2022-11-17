@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0a8c6e9a-49ab-4b5b-b9c8-11c5c6db6950" ChangeDateTime="10/18/2018 22:20:52">
+    <Property Name="ElementName" Value="[dbo].[AnalyticsUserProfilesSubsites].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AnalyticsUserProfilesSubsites]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a9e22bcb-fcb3-41b7-ac3d-16df4db97c78" ChangeDateTime="10/19/2018 17:26:53">
+    <Property Name="ElementName" Value="[dbo].[TenantSiteMailboxes].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TenantSiteMailboxes]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e1b19203-0cd3-40e3-826b-d68775ea2856" ChangeDateTime="10/09/2019 19:09:17">
+    <Property Name="ElementName" Value="[dbo].[GraphTeamsActivityUserDetail].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[GraphTeamsActivityUserDetail]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UPN" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a4dd75b2-421f-453d-847a-ba5881768156" ChangeDateTime="10/09/2019 19:25:06">
+    <Property Name="ElementName" Value="[dbo].[GraphTeamsActivityUserDetail].[ProductsAssigned]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[GraphTeamsActivityUserDetail]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AssignedProducts" />
+  </Operation>
+</Operations>
