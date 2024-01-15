@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <UserSecretsId>aspnet-Microsoft.Services.OutlookRoomFinderReports-eb6f5dd0-a072-4694-a281-77cae843c6cd</UserSecretsId>
     <Configurations>Debug;Release</Configurations>
     <ApplicationInsightsResourceId></ApplicationInsightsResourceId>
