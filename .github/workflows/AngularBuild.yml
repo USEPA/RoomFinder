@@ -2,7 +2,7 @@ name: Angular Build
 on:
   push:
     branches:
-      - master
+      - main
 env: NODE_OPTIONS = "--openssl-legacy-provider"
     
 
