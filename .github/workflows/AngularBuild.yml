@@ -13,13 +13,13 @@ jobs:
         working-directory: ./Angular
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
 
       - name: Create Angular Artificats Directory
         run: mkdir AngularArtifacts
 
       - name: Cache node modules
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -27,7 +27,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: '20'
 
@@ -39,7 +39,7 @@ jobs:
           ng build -prod
 
       - name: Archive Production Artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: AngularArtifacts
           path: ./dist
