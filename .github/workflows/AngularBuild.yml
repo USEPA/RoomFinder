@@ -40,7 +40,10 @@ jobs:
             npm run build -- --prod
 
       - name: List files
-        run: ls ./DotNet/src/OutlookRoomFinder.Web/wwwroot/apps
+        run: ls
+
+      - name: List previous files
+        run: ls /home/runner/work/OutlookRoomFinder/
 
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
