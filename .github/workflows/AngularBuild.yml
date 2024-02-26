@@ -39,6 +39,8 @@ jobs:
             export NODE_OPTIONS=--openssl-legacy-provider
             npm run build -- --prod
 
+      - name: List files
+        run: ls
 
       - name: Archive Production Artifact
         uses: actions/upload-artifact@v2
