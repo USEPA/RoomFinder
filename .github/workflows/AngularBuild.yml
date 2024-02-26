@@ -52,15 +52,15 @@ jobs:
 
       - name: Restore .NET Project
         working-directory: ./DotNet
-        run: dotnet restore DotNet/OutlookRoomFinderCore.sln
+        run: dotnet restore OutlookRoomFinderCore.sln
 
       - name: Build .NET Project
         working-directory: ./DotNet
-        run: dotnet build DotNet/OutlookRoomFinderCore.sln
+        run: dotnet build OutlookRoomFinderCore.sln
 
       - name: Publish .NET Project
         working-directory: ./DotNet
-        run: dotnet publish ./DotNet/OutlookRoomFinderCore.sln -c Release -o build
+        run: dotnet publish OutlookRoomFinderCore.sln -c Release -o build
 
       - name: Archive Production Artifact
         uses: actions/upload-artifact@v2
