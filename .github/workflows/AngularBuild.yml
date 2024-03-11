@@ -58,8 +58,8 @@ jobs:
         run: dotnet build OutlookRoomFinderCore.sln
 
       - name: Publish .NET Project
-        working-directory: ./DotNet/src/OutlookRoomFinder.Web
-        run: dotnet publish OutlookRoomFinder.Web.csproj -c Release -o build
+        working-directory: ./DotNet
+        run: dotnet publish /src/OutlookRoomFinder.Web/OutlookRoomFinder.Web.csproj -c Release -o build
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
