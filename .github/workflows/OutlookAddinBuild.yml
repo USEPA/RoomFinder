@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,12 +11,45 @@ jobs:
       run:
         working-directory: ./PowerShell/src/EPA.SharePoint.SysConsole
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup dotnet
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '6.0.x'
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build
+      - uses: actions/checkout@v4
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "6.0.x"
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build
+      - name: Run PowerShell
+        shell: pwsh
+        run: |
+          #$hashDir = "$(Build.artifactstagingdirectory)"
+          # PowerShell to enumerate the staging directory and compile the HASH
+          #$hashDir = "$(Build.artifactstagingdirectory)"
+          #$buildNo = "$(Build.BuildNumber)"
+          #$hashMdFileName = Join-Path $hashDir -ChildPath ("build_{0}.md" -f  $buildNo)
+          #$hashCsvFileName = Join-Path $hashDir -ChildPath ("build_{0}.csv" -f  $buildNo)
+          #Write-Host ("Hash Dir {0}" -f $hashDir)
+          #Write-Host ("MD File {0}" -f $hashMdFileName)
+          #Write-Host ("CSV File {0}" -f $hashCsvFileName)
+          #$hashitems = @()
+          #Add-Content -Path $hashMdFileName -Force -Value "SHA256 Hash for CoolBridge"
+          #Add-Content -Path $hashMdFileName -Value "Version: $(Build.BuildId)"
+          #Get-ChildItem -Path $hashDir -File -Recurse | ForEach-Object {
+          #$item = [pscustomobject]@{
+          #DirectoryName = $_.DirectoryName
+          #Name = $_.Name
+          #Version = $_.VersionInfo.ProductVersion
+          #LastWriteTime = $_.LastWriteTime
+          #Length = $_.Length
+          #FileHash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash
+          #}
+          #$hashitems += $item
+          #Add-Content -Path $hashMdFileName "-----"
+          #Add-Content -Path $hashMdFileName -Value $item
+          #Write-Host $item
+          #}
+          #Write-Host "##vso[task.uploadsummary]$hashMdFileName"
+          #$hashitems | Export-csv -Delimiter ',' -NoTypeInformation -Path $hashCsvFileName
+          #Write-Host "##vso[task.uploadfile]$hashCsvFileName"
+

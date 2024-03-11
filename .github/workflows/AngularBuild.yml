@@ -34,10 +34,15 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: npm build
+      - name: npm build reporting
         run: |
             export NODE_OPTIONS=--openssl-legacy-provider
-            npm run build -- --prod
+            npm run build reporting -- --prod
+
+      - name: npm build outlookaddin
+        run: |
+          export NODE_OPTIONS=--openssl-legacy-provider
+          npm run build outlookaddin -- --prod
 
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
@@ -53,8 +58,8 @@ jobs:
         run: dotnet build OutlookRoomFinderCore.sln
 
       - name: Publish .NET Project
-        working-directory: ./DotNet
-        run: dotnet publish OutlookRoomFinderCore.sln -c Release -o build
+        working-directory: ./DotNet/src/OutlookRoomFinder.Web
+        run: dotnet publish OutlookRoomFinder.Web.csproj -c Release -o build
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
