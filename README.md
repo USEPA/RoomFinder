@@ -13,7 +13,7 @@ This project requires installation of back-end components. Please refer to the t
 Prerequisites: 
 1. Office 365 specifically: (Exchange Online, Outlook [Office])
 2. Azure App Service or Web Server (IIS) for hosting the Office Add-in.   Windows or Linux
-3. (OPTIONAL) Active Directory (LDAP) accessible the web server, containing all room and equipment resources and for alkdjf;lkjekasdlvfc
+3. (OPTIONAL) Active Directory (LDAP) accessible the web server, containing all room and equipment resources
 4. IMPORTANT: for Exchange Online (Office 365), mailboxes must be in sync between local JSON file (```\DotNet\src\OutlookRoomFinder.Web\wwwroot\assets\config\resources-objects.epaproduction.json```) and Office 365.   The primary fields are userPrincipalName and primarySmtpAddress.
 
 ## Documentation
